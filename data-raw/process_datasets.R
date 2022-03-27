@@ -9,7 +9,8 @@ deliveries <- read_csv("data-raw/ipl.csv") %>%
     year = format(date, "%Y")
   ) %>%
   select(id, year, date) %>%
-  right_join(read_csv("data-raw/deliveries.csv"), by = c("id"))
+  right_join(read_csv("data-raw/deliveries.csv"), by = c("id")) %>%
+  mutate(year = as.numeric(year))
 
 usethis::use_data(deliveries, overwrite = TRUE)
 

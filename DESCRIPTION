@@ -1,0 +1,34 @@
+Package: ipl
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person("Swaha", "Bhattacharya", , "itsswahabhattacharya@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: 
+    This package has data on IPL all IPL matches played in the years 2008-2020. 
+    It contains functions to calculate the batting average, maximum runs made, strike rate, 
+    and the number of centuriesand half-centuries made by a batsman in a given IPL season.
+License: MIT + file LICENSE
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports:
+    magrittr,
+    dplyr,
+    ggplot2,
+    tibble,
+    janitor,
+    broom (>= 0.4.3),
+    formula.tools,
+    stringr,
+    knitr,
+    infer,
+    rlang (>= 0.2.0),
+    glue,
+    tidyverse
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Depends: 
+    R (>= 2.10)
+LazyData: true

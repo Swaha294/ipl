@@ -1,0 +1,65 @@
+context("bat_avg")
+
+library(tidyverse)
+library(testthat)
+
+df <- data.frame(
+  "batsman" = "V Kohli",
+  year = 2016,
+  player_runs = 973,
+  player_wickets = 12,
+  batting_avg = 81.08
+  )
+
+
+df2 <- data.frame(
+  "batsman" = c("V Kohli","V Kohli", "MS Dhoni", "MS Dhoni"),
+  "year" = c(2016, 2017, 2016, 2017),
+  player_runs = c(973, 308, 284, 290),
+  player_wickets = c(12, 10, 8, 13),
+  batting_avg = c(81.08, 30.80, 35.50, 22.31)
+)
+
+expect_equal(df, bat_avg("V Kohli", 2016))
+
+expect_equal(df2, bat_avg(c("V Kohli", "MS Dhoni"), 2016:2017))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
