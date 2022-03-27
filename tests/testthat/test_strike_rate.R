@@ -1,6 +1,7 @@
 context("strike_rate")
 
-library(tidyverse)
+library(tibble)
+library(dplyr)
 library(testthat)
 
 
@@ -10,7 +11,7 @@ df <- tibble(
 )
 
 
-test_that({
+test_that("check strike rate", {
   expect_equal(df, strike_rate("MS Dhoni", 2019))
 })
 

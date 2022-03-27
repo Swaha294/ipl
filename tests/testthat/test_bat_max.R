@@ -1,6 +1,7 @@
 context("bat_max")
 
-library(tidyverse)
+library(tibble)
+library(dplyr)
 library(testthat)
 
 
@@ -9,8 +10,8 @@ df <- tibble(
   max_runs = 84
 )
 
-test_that({
-  expect_equal(df, bat_max("MS Dhoni", 2019))
+test_that("check maximum runs", {
+  expect_identical(df, bat_max("MS Dhoni", 2019))
 })
 
 

@@ -1,6 +1,7 @@
 context("cents_halfcents")
 
-library(tidyverse)
+library(tibble)
+library(dplyr)
 library(testthat)
 
 
@@ -10,7 +11,7 @@ df <- tibble(
   half_centuries = 7
 )
 
-test_that({
+test_that("check cents and half-cents", {
   expect_equal(df, cents_halfcents("V Kohli", 2016))
 })
 

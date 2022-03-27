@@ -1,6 +1,7 @@
 context("bat_avg")
 
-library(tidyverse)
+library(tibble)
+library(dplyr)
 library(testthat)
 
 df <- data.frame(
@@ -20,9 +21,9 @@ df2 <- data.frame(
   batting_avg = c(81.08, 30.80, 35.50, 22.31)
 )
 
-test_that({
-  expect_equal(df, bat_avg("V Kohli", 2016))
-  expect_equal(df2, bat_avg(c("V Kohli", "MS Dhoni"), 2016:2017))
+test_that("check batting avg", {
+  expect_identical(df, bat_avg("V Kohli", 2016))
+  expect_identical(df2, bat_avg(c("V Kohli", "MS Dhoni"), 2016:2017))
 })
 
 
