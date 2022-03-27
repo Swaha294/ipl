@@ -10,8 +10,11 @@ df <- tibble(
   half_centuries = 7
 )
 
+test_that({
+  expect_equal(df, cents_halfcents("V Kohli", 2016))
+})
 
-expect_equal(df, cents_halfcents("V Kohli", 2016))
+
 
 
 

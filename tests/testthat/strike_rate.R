@@ -10,8 +10,11 @@ df <- tibble(
 )
 
 
+test_that({
+  expect_equal(df, strike_rate("MS Dhoni", 2019))
+})
 
-expect_equal(df, strike_rate("MS Dhoni", 2019))
+
 
 
 

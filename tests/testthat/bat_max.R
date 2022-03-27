@@ -9,7 +9,10 @@ df <- tibble(
   max_runs = 84
 )
 
-expect_equal(df, bat_max("MS Dhoni", 2019))
+test_that({
+  expect_equal(df, bat_max("MS Dhoni", 2019))
+})
+
 
 
 

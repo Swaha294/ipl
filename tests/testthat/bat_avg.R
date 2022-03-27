@@ -20,9 +20,10 @@ df2 <- data.frame(
   batting_avg = c(81.08, 30.80, 35.50, 22.31)
 )
 
-expect_equal(df, bat_avg("V Kohli", 2016))
-
-expect_equal(df2, bat_avg(c("V Kohli", "MS Dhoni"), 2016:2017))
+test_that({
+  expect_equal(df, bat_avg("V Kohli", 2016))
+  expect_equal(df2, bat_avg(c("V Kohli", "MS Dhoni"), 2016:2017))
+})
 
 
 
