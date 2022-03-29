@@ -114,7 +114,8 @@ teams <- map2_df((unique(deliveries$batting_team[deliveries$year == 2008])), 200
   rbind(map2_df((unique(deliveries$batting_team[deliveries$year == 2020])), 2020, winning_team))
 
 teams <- teams %>%
-  distinct()
+  distinct() %>%
+  ungroup()
 
 
 usethis::use_data(teams, overwrite = TRUE)
