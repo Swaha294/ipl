@@ -7,10 +7,11 @@
 bat_avg(players, years)
 }
 \arguments{
-\item{players}{a list of batsmen for whom batting average has to be calculated, as character vectors}
+\item{players}{a list of batsmen for whom batting average has to be calculated,
+as character vectors}
 
-\item{years}{a list of seasons (years) for which the batting average of the given batsmen has to be
-calculated, as numeric vectors}
+\item{years}{a list of seasons (years) for which the batting average of the
+given batsmen has to be calculated, as numeric vectors}
 }
 \description{
 Calculate batting average of batsmen by season

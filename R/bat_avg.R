@@ -1,9 +1,10 @@
 #' Calculate batting average of batsmen by season
 #'
 #'
-#'@param players a list of batsmen for whom batting average has to be calculated, as character vectors
-#'@param years a list of seasons (years) for which the batting average of the given batsmen has to be
-#'calculated, as numeric vectors
+#'@param players a list of batsmen for whom batting average has to be calculated,
+#' as character vectors
+#'@param years a list of seasons (years) for which the batting average of the
+#'given batsmen has to be calculated, as numeric vectors
 #'
 #'
 #' @examples
@@ -24,21 +25,23 @@
 #'
 #'
 #' @importFrom magrittr "%>%"
+#' @import dplyr
 #' @export
+
 bat_avg <- function(players, years) {
 
   avg_calc <- function(player, yr){
 
     deliveries %>%
-      dplyr::filter(batsman %in% player,
+      filter(batsman %in% player,
              year %in% yr) %>%
-      dplyr::group_by(batsman, year) %>%
-      dplyr::summarise(
+      group_by(batsman, year) %>%
+      summarise(
         player_runs = sum(batsman_runs),
         player_wickets = length(unique(.$id[.$is_wicket == 1])),
         batting_avg = round(player_runs/player_wickets, 2)
       ) %>%
-      dplyr::ungroup()
+      ungroup()
 
   }
 
@@ -59,19 +62,20 @@ bat_avg <- function(players, years) {
       } else if (!is.numeric(y)) {
         stop("Invalid input: year should be a numeric vector", call. = FALSE)
       } else if (!(pl %in% deliveries$batsman)) {
-        warning(paste0(pl, " not found! \n"), call. = FALSE)
+        stop(paste0(pl, " not found! \n"), call. = FALSE)
       } else if (!(y %in% deliveries$year)) {
-        warning(paste0(y, " not found! \n"), call. = FALSE)
+        stop(paste0(y, "years not found! \n"), call. = FALSE)
       } else {
-        avgs <- dplyr::full_join(avgs, avg_calc(pl, y),
-                          by = c("batsman", "year", "player_runs", "player_wickets", "batting_avg"))
+        avgs <- full_join(avgs, avg_calc(pl, y),
+                          by = c("batsman", "year", "player_runs",
+                                 "player_wickets", "batting_avg"))
       }
 
     }
   }
 
   avgs <- avgs %>%
-    dplyr::filter(!is.na(batsman))
+    filter(!is.na(batsman))
 
   return(avgs)
 

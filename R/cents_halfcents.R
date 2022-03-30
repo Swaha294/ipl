@@ -19,9 +19,10 @@
 #'
 #'
 #'
-#'@importFrom magrittr "%>%"
+#' @importFrom magrittr "%>%"
+#' @import dplyr
 #' @export
-#'
+
 cents_halfcents <- function(player, yr){
   if (!is.character(player)) {
     stop("Invalid input: player input should be a character vector")
@@ -33,20 +34,20 @@ cents_halfcents <- function(player, yr){
     stop(paste0(`yr`, "Year not found"))
   } else {
     deliveries %>%
-      dplyr::filter(
-        batsman == player,
-        year == yr
+      filter(
+        batsman %in% player,
+        year %in% yr
       ) %>%
-      dplyr::group_by(id, batsman) %>%
-      dplyr::distinct() %>%
-      dplyr::summarise(
+      group_by(id, batsman) %>%
+      distinct() %>%
+      summarise(
         player_runs = sum(batsman_runs),
         cents = player_runs %/% 100,
         half_cents = (player_runs - (cents*100)) %/% 50
       ) %>%
-      dplyr::ungroup() %>%
-      dplyr::group_by(batsman) %>%
-      dplyr::summarise(
+      ungroup() %>%
+      group_by(batsman) %>%
+      summarise(
         centuries = sum(cents),
         half_centuries = sum(half_cents)
       )

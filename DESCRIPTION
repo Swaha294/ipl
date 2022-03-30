@@ -15,16 +15,12 @@ Config/testthat/edition: 3
 Imports:
     magrittr,
     dplyr,
-    ggplot2,
     tibble,
     janitor,
     broom (>= 0.4.3),
     formula.tools,
-    stringr,
     knitr,
-    infer,
-    rlang (>= 0.2.0),
-    glue
+    rlang (>= 0.2.0)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2

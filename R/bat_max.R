@@ -23,9 +23,11 @@
 #'
 #'
 #'
-#'@importFrom magrittr "%>%"
+#' @importFrom magrittr "%>%"
+#' @import dplyr
 #'
 #' @export
+
 bat_max <- function(player, yr) {
   if (!is.character(player)) {
     stop("Invalid input: player input should be a character vector")
@@ -37,13 +39,13 @@ bat_max <- function(player, yr) {
     stop(paste0(`yr`, "Year not found"))
   } else {
     deliveries %>%
-      dplyr::filter(batsman == player,
-             year == yr) %>%
-      dplyr::group_by(id, batsman) %>%
-      dplyr::summarise(match_runs = sum(batsman_runs)) %>%
-      dplyr::ungroup() %>%
-      dplyr::group_by(batsman) %>%
-      dplyr::summarise(max_runs = max(match_runs))
+      filter(batsman %in% player,
+             year %in% yr) %>%
+      group_by(id, batsman) %>%
+      summarise(match_runs = sum(batsman_runs)) %>%
+      ungroup() %>%
+      group_by(batsman) %>%
+      summarise(max_runs = max(match_runs))
   }
 }
 

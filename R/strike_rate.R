@@ -16,7 +16,8 @@
 #'
 #'
 #'
-#'@importFrom magrittr "%>%"
+#' @importFrom magrittr "%>%"
+#' @import dplyr
 #'
 #' @export
 #'
@@ -32,18 +33,18 @@ strike_rate <- function(player, yr){
   } else {
     balls_faced <- function(player, yr) {
       deliveries %>%
-        dplyr::filter(batsman == player,
-               year == yr,
+        filter(batsman %in% player,
+               year %in% yr,
                extras_type != "wides" | is.na(extras_type)) %>%
         nrow()
     }
 
     deliveries %>%
-      dplyr::filter(
+      filter(
         batsman == player,
         year == yr) %>%
-      dplyr::group_by(batsman) %>%
-      dplyr::summarise(
+      group_by(batsman) %>%
+      summarise(
         strike_rate = round(100*sum(batsman_runs)/balls_faced(player, yr), 2)
       )
   }

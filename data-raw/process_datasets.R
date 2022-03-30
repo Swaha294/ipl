@@ -41,12 +41,14 @@ winning_team <- function(teams, yr){
       n_overs = length(unique(over)),
       diff = n_balls - (n_overs*6)
     ) %>%
-    mutate(n_overs2 = ifelse(diff < 0, as.numeric(paste0(n_overs - 1, ".", 6 + diff)), n_overs)) %>%
+    mutate(n_overs2 = ifelse(diff < 0, as.numeric(paste0(n_overs - 1, ".",
+                                                         6 + diff)), n_overs)) %>%
     ungroup() %>%
     select(-c(n_balls, n_overs, diff)) %>%
     rename(n_overs = n_overs2)
 
-  team_runs <- left_join(team_runs, team_overs, by = c("id", "year", "date", "batting_team"))
+  team_runs <- left_join(team_runs, team_overs, by = c("id", "year", "date",
+                                                       "batting_team"))
 
 
   dates <- team_runs %>%
@@ -67,7 +69,8 @@ winning_team <- function(teams, yr){
     if (team_runs$date[i] %in% dates){
       team_runs$winning_team[i] = "No Result"
       df <- full_join(df, team_runs[i, ],
-                      by = c("id", "year", "date", "batting_team", "match_runs", "n_overs", "winning_team"))
+                      by = c("id", "year", "date", "batting_team", "match_runs",
+                             "n_overs", "winning_team"))
       team_runs <- team_runs[-i, ]
     }
   }
