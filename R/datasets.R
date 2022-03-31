@@ -47,3 +47,25 @@
 #' @seealso This data set was created from the `deliveries` data set of the `ipl`
 #' package.
 "teams"
+
+#'
+#'
+#' @format A data frame of 100 rows representing the stats of the top 100 batsman
+#' \describe{
+#' \item{POS}
+#' \item{PLAYER}
+#' \item{Mat}
+#' \item{Inns}
+#' \item{NO}
+#' \item{Runs}
+#' \item{HS}
+#' \item{Avg}
+#' \item{BF}
+#' \item{SR}
+#' \item{100}
+#' \item{50}
+#' \item{4s}
+#' \item{6s}
+#' }
+#' @source This dataset was obtained from Kaggle: [Top_100_Batsman](https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset?select=Top_100_bowlers.xlsx).
+"batsman"
