@@ -1,5 +1,5 @@
 Package: ipl
-Title: What the Package Does (One Line, Title Case)
+Title: Data and functions for analysing IPL matches played in 2008-2020
 Version: 0.0.0.9000
 Authors@R: 
     person("Swaha", "Bhattacharya", , "itsswahabhattacharya@gmail.com", role = c("aut", "cre"),
