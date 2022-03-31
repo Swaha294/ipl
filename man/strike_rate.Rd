@@ -12,6 +12,9 @@ strike_rate(player, yr)
 \item{yr}{The year for which the strike rate of the given batsman has to be calculated,
 as a numeric vector}
 }
+\value{
+\code{strike_rate} returns a tibble with one row and two columns.
+}
 \description{
 Calculate strike rate of a given batsman in a given season
 }

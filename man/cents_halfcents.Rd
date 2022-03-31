@@ -14,6 +14,9 @@ have to be calculated, as a character vectors}
 \item{yr}{The season (year) for which the number of centuries and
 half-centuries for the given batsman have to be calculated, as a numeric vector}
 }
+\value{
+\code{cents_halfcents} returns a tibble with one row and three columns.
+}
 \description{
 Calculate the number of centuries and half-centuries made a batsman in a given
 season

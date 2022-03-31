@@ -13,6 +13,10 @@ as character vectors}
 \item{years}{a list of seasons (years) for which the batting average of the
 given batsmen has to be calculated, as numeric vectors}
 }
+\value{
+\code{bat_avg} returns a data frame with \code{nrow} equal to the product of the
+number of players and years inputted and 5 columns.
+}
 \description{
 Calculate batting average of batsmen by season
 }

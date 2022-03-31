@@ -13,6 +13,9 @@ a character vector}
 \item{yr}{the season for which the maximum runs of the given batsman have to
 be calculated, as a numeric vector}
 }
+\value{
+\code{bat_max} returns a \code{tbl_df} with one row and two columns.
+}
 \description{
 Calculate the maximum runs made by a batsman in a given season
 }

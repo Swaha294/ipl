@@ -4,6 +4,8 @@
 #' @param yr The year for which the strike rate of the given batsman has to be calculated,
 #' as a numeric vector
 #'
+#' @return `strike_rate` returns a tibble with one row and two columns.
+#'
 #' @examples
 #'
 #' library(ipl)

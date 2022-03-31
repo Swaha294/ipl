@@ -8,6 +8,7 @@
 #' @param yr The season (year) for which the number of centuries and
 #' half-centuries for the given batsman have to be calculated, as a numeric vector
 #'
+#' @return `cents_halfcents` returns a tibble with one row and three columns.
 #'
 #' @examples
 #'

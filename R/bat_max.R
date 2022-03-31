@@ -6,6 +6,8 @@
 #' @param yr the season for which the maximum runs of the given batsman have to
 #' be calculated, as a numeric vector
 #'
+#' @return `bat_max` returns a `tbl_df` with one row and two columns.
+#'
 #'
 #' @examples
 #'

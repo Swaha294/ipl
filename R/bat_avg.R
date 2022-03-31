@@ -6,6 +6,8 @@
 #' @param years a list of seasons (years) for which the batting average of the
 #' given batsmen has to be calculated, as numeric vectors
 #'
+#' @return `bat_avg` returns a data frame with `nrow` equal to the product of the
+#' number of players and years inputted and 5 columns.
 #'
 #' @examples
 #'
@@ -56,7 +58,7 @@ bat_avg <- function(players, years) {
       } else if (!(pl %in% deliveries$batsman)) {
         stop(paste0(pl, " not found! \n"), call. = FALSE)
       } else if (!(y %in% deliveries$year)) {
-        stop(paste0(y, "years not found! \n"), call. = FALSE)
+        stop(paste0(y, " year not found! \n"), call. = FALSE)
       } else {
         avgs <- full_join(avgs, avg_calc(pl, y),
           by = c(
