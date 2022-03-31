@@ -137,3 +137,11 @@ teams <- teams %>%
   distinct() %>%
   ungroup()
 usethis::use_data(teams, overwrite = TRUE)
+
+
+## Clean the Bowlers data
+bowlers <- read_csv("data-raw/bowlers.csv")
+bowlers$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", bowlers$PLAYER))
+bowlers %>%
+  janitor::clean_names()
+usethis::use_data(bowlers, overwrite = TRUE)
