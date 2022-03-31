@@ -68,7 +68,15 @@ cents_halfcents("V Kohli", 2016)
 strike_rate("V Kohli", 2016)
 ```
 
+5. Calculate Rahul Sharma's bowler score
+```{r}
+bowler_score("Rahul Sharma")
+```
 
+6. Calculate Rahul Sharma's overs
+```{r}
+overs("Rahul Sharma")
+```
 
 
 
