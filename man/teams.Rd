@@ -3,17 +3,30 @@
 \docType{data}
 \name{teams}
 \alias{teams}
-\title{Winning team, overs bowled, runs made and wickets fallen for each team in
-each IPL match played in 2008-2020}
+\title{Winning team, overs bowled, runs made and wickets fallen for each match played
+by each IPL team in 2008-2020.}
 \format{
 A data frame of 1630 rows representing the result, runs made, overs
-played, and wickets fallen for each team in each IPL match played in 2008-2020
+played, and wickets fallen for each match played by each IPL team in 2008-2020.
+\describe{
+\item{id}{Unique match ID of the IPL match as per ESPNCricinfo}
+\item{year}{Season (year) of the IPL match}
+\item{date}{Date of IPL match}
+\item{batting_team}{Batting team on strike}
+\item{match_runs}{Runs made by the batting team in the given IPL match}
+\item{winning_team}{Winning team of given IPL match}
+\item{n_overs}{Number of overs faced by the batting team in the given IPL match}
+}
 }
 \usage{
 teams
 }
 \description{
-Winning team, overs bowled, runs made and wickets fallen for each team in
-each IPL match played in 2008-2020
+Winning team, overs bowled, runs made and wickets fallen for each match played
+by each IPL team in 2008-2020.
+}
+\seealso{
+This data set was created from the \code{deliveries} data set of the \code{ipl}
+package.
 }
 \keyword{datasets}

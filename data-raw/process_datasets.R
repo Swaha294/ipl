@@ -10,8 +10,15 @@ deliveries <- read_csv("data-raw/ipl.csv") %>%
   ) %>%
   select(id, year, date) %>%
   right_join(read_csv("data-raw/deliveries.csv"), by = c("id")) %>%
-  mutate(year = as.numeric(year))
-
+  mutate(
+    id = as.factor(id),
+    year = as.numeric(year),
+    inning = as.factor(inning),
+    non_boundary = as.factor(non_boundary),
+    is_wicket = as.factor(is_wicket),
+    extras_type = as.factor(extras_type),
+    player_dismissed = as.factor(player_dismissed)
+  )
 usethis::use_data(deliveries, overwrite = TRUE)
 
 
@@ -129,6 +136,4 @@ teams <- map2_df((unique(deliveries$batting_team[deliveries$year == 2008])), 200
 teams <- teams %>%
   distinct() %>%
   ungroup()
-
-
 usethis::use_data(teams, overwrite = TRUE)
