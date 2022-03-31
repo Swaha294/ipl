@@ -1,9 +1,10 @@
 #' Calculate the maximum runs made by a batsman in a given season
 #'
 #'
-#' @param player the batsman for whom maximum runs have to be calculated, as a character vector
-#' @param yr the season for which the maximum runs of the given batsman have to be calculated, as
-#' a numeric vector
+#' @param player the batsman for whom maximum runs have to be calculated, as
+#' a character vector
+#' @param yr the season for which the maximum runs of the given batsman have to
+#' be calculated, as a numeric vector
 #'
 #'
 #' @examples
@@ -15,14 +16,6 @@
 #'
 #' # Find maximum runs made by AB de Villiers in the year 2019
 #' bat_max("AB de Villiers", 2019)
-#'
-#'
-#'
-#'
-#'
-#'
-#'
-#'
 #' @importFrom magrittr "%>%"
 #' @import dplyr
 #'
@@ -39,8 +32,10 @@ bat_max <- function(player, yr) {
     stop(paste0(`yr`, "Year not found"))
   } else {
     deliveries %>%
-      filter(batsman %in% player,
-             year %in% yr) %>%
+      filter(
+        batsman %in% player,
+        year %in% yr
+      ) %>%
       group_by(id, batsman) %>%
       summarise(match_runs = sum(batsman_runs)) %>%
       ungroup() %>%
@@ -48,24 +43,3 @@ bat_max <- function(player, yr) {
       summarise(max_runs = max(match_runs))
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

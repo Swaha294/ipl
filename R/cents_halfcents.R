@@ -1,11 +1,12 @@
-#' Calculate the number of centuries and half-centuries made a batsman in a given season
+#' Calculate the number of centuries and half-centuries made a batsman in a given
+#' season
 #'
 #'
-#' @param player The batsman for whom the number of centuries and half-centuries have to
-#' be calculated, as a character vectors
+#' @param player The batsman for whom the number of centuries and half-centuries
+#' have to be calculated, as a character vectors
 #'
-#' @param yr The season (year) for which the number of centuries and half-centuries for the given
-#' batsman have to be calculated, as a numeric vector
+#' @param yr The season (year) for which the number of centuries and
+#' half-centuries for the given batsman have to be calculated, as a numeric vector
 #'
 #'
 #' @examples
@@ -16,14 +17,11 @@
 #' # in the 2016 IPL season
 #'
 #' cents_halfcents("V Kohli", 2016)
-#'
-#'
-#'
 #' @importFrom magrittr "%>%"
 #' @import dplyr
 #' @export
 
-cents_halfcents <- function(player, yr){
+cents_halfcents <- function(player, yr) {
   if (!is.character(player)) {
     stop("Invalid input: player input should be a character vector")
   } else if (!is.numeric(yr)) {
@@ -43,7 +41,7 @@ cents_halfcents <- function(player, yr){
       summarise(
         player_runs = sum(batsman_runs),
         cents = player_runs %/% 100,
-        half_cents = (player_runs - (cents*100)) %/% 50
+        half_cents = (player_runs - (cents * 100)) %/% 50
       ) %>%
       ungroup() %>%
       group_by(batsman) %>%
@@ -53,30 +51,3 @@ cents_halfcents <- function(player, yr){
       )
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

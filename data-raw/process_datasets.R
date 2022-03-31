@@ -16,9 +16,9 @@ usethis::use_data(deliveries, overwrite = TRUE)
 
 
 
-## Creating function to create teams data set
+## Creating function to create `teams` data set
 
-winning_team <- function(teams, yr){
+winning_team <- function(teams, yr) {
   team_runs <- deliveries %>%
     filter(
       batting_team %in% teams | bowling_team %in% teams,
@@ -30,25 +30,30 @@ winning_team <- function(teams, yr){
 
 
   team_overs <- deliveries %>%
-    filter(batting_team %in% teams | bowling_team %in% teams,
-           yr == year,
-           extras_type %in% c("byes", "legbyes") | is.na(extras_type)
+    filter(
+      batting_team %in% teams | bowling_team %in% teams,
+      yr == year,
+      extras_type %in% c("byes", "legbyes") | is.na(extras_type)
     ) %>%
     arrange(over, ball) %>%
     group_by(id, year, date, batting_team) %>%
     summarise(
       n_balls = n(),
       n_overs = length(unique(over)),
-      diff = n_balls - (n_overs*6)
+      diff = n_balls - (n_overs * 6)
     ) %>%
-    mutate(n_overs2 = ifelse(diff < 0, as.numeric(paste0(n_overs - 1, ".",
-                                                         6 + diff)), n_overs)) %>%
+    mutate(n_overs2 = ifelse(diff < 0, as.numeric(paste0(
+      n_overs - 1, ".",
+      6 + diff
+    )), n_overs)) %>%
     ungroup() %>%
     select(-c(n_balls, n_overs, diff)) %>%
     rename(n_overs = n_overs2)
 
-  team_runs <- left_join(team_runs, team_overs, by = c("id", "year", "date",
-                                                       "batting_team"))
+  team_runs <- left_join(team_runs, team_overs, by = c(
+    "id", "year", "date",
+    "batting_team"
+  ))
 
 
   dates <- team_runs %>%
@@ -57,35 +62,40 @@ winning_team <- function(teams, yr){
     filter(N == 1) %>%
     .$date
 
-  df <- data.frame(id = NA,
-                   year = NA,
-                   date = NA,
-                   batting_team = NA,
-                   match_runs = NA,
-                   n_overs = NA,
-                   winning_team = NA)
+  df <- data.frame(
+    id = NA,
+    year = NA,
+    date = NA,
+    batting_team = NA,
+    match_runs = NA,
+    n_overs = NA,
+    winning_team = NA
+  )
 
-  for (i in 1:nrow(team_runs)){
-    if (team_runs$date[i] %in% dates){
-      team_runs$winning_team[i] = "No Result"
+  for (i in 1:nrow(team_runs)) {
+    if (team_runs$date[i] %in% dates) {
+      team_runs$winning_team[i] <- "No Result"
       df <- full_join(df, team_runs[i, ],
-                      by = c("id", "year", "date", "batting_team", "match_runs",
-                             "n_overs", "winning_team"))
+        by = c(
+          "id", "year", "date", "batting_team", "match_runs",
+          "n_overs", "winning_team"
+        )
+      )
       team_runs <- team_runs[-i, ]
     }
   }
 
 
   for (i in seq(1, nrow(team_runs), 2)) {
-    if (team_runs$match_runs[i] < team_runs$match_runs[i+1]) {
-      team_runs$winning_team[i] = team_runs$batting_team[i+1]
-      team_runs$winning_team[i+1] = team_runs$batting_team[i+1]
-    } else if (team_runs$match_runs[i] > team_runs$match_runs[i+1]){
-      team_runs$winning_team[i] = team_runs$batting_team[i]
-      team_runs$winning_team[i+1] = team_runs$batting_team[i]
+    if (team_runs$match_runs[i] < team_runs$match_runs[i + 1]) {
+      team_runs$winning_team[i] <- team_runs$batting_team[i + 1]
+      team_runs$winning_team[i + 1] <- team_runs$batting_team[i + 1]
+    } else if (team_runs$match_runs[i] > team_runs$match_runs[i + 1]) {
+      team_runs$winning_team[i] <- team_runs$batting_team[i]
+      team_runs$winning_team[i + 1] <- team_runs$batting_team[i]
     } else {
-      team_runs$winning_team[i] = "Draw"
-      team_runs$winning_team[i+1] = "Draw"
+      team_runs$winning_team[i] <- "Draw"
+      team_runs$winning_team[i + 1] <- "Draw"
     }
   }
 
@@ -122,29 +132,3 @@ teams <- teams %>%
 
 
 usethis::use_data(teams, overwrite = TRUE)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -8,20 +8,14 @@
 #'
 #' library(ipl)
 #'
-#'  # Calculate the strike rate of MS Dhoni in the 2016 IPL season
-#'strike_rate("MS Dhoni", 2016)
-#'
-#'
-#'
-#'
-#'
-#'
+#' # Calculate the strike rate of MS Dhoni in the 2016 IPL season
+#' strike_rate("MS Dhoni", 2016)
 #' @importFrom magrittr "%>%"
 #' @import dplyr
 #'
 #' @export
 #'
-strike_rate <- function(player, yr){
+strike_rate <- function(player, yr) {
   if (!is.character(player)) {
     stop("Invalid input: player input should be a character vector")
   } else if (!is.numeric(yr)) {
@@ -33,33 +27,22 @@ strike_rate <- function(player, yr){
   } else {
     balls_faced <- function(player, yr) {
       deliveries %>%
-        filter(batsman %in% player,
-               year %in% yr,
-               extras_type != "wides" | is.na(extras_type)) %>%
+        filter(
+          batsman %in% player,
+          year %in% yr,
+          extras_type != "wides" | is.na(extras_type)
+        ) %>%
         nrow()
     }
 
     deliveries %>%
       filter(
         batsman == player,
-        year == yr) %>%
+        year == yr
+      ) %>%
       group_by(batsman) %>%
       summarise(
-        strike_rate = round(100*sum(batsman_runs)/balls_faced(player, yr), 2)
+        strike_rate = round(100 * sum(batsman_runs) / balls_faced(player, yr), 2)
       )
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
