@@ -33,8 +33,8 @@ The `ipl` R package consists of datasets on all IPL matches played in the years 
 
 You can install the development version of ipl like so:
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+``` {r}
+remotes::install_github("Swaha294/ipl")
 ```
 
 ## Example
