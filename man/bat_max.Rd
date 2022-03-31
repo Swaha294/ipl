@@ -7,10 +7,11 @@
 bat_max(player, yr)
 }
 \arguments{
-\item{player}{the batsman for whom maximum runs have to be calculated, as a character vector}
+\item{player}{the batsman for whom maximum runs have to be calculated, as
+a character vector}
 
-\item{yr}{the season for which the maximum runs of the given batsman have to be calculated, as
-a numeric vector}
+\item{yr}{the season for which the maximum runs of the given batsman have to
+be calculated, as a numeric vector}
 }
 \description{
 Calculate the maximum runs made by a batsman in a given season
@@ -24,12 +25,4 @@ bat_max("V Kohli", 2016)
 
 # Find maximum runs made by AB de Villiers in the year 2019
 bat_max("AB de Villiers", 2019)
-
-
-
-
-
-
-
-
 }

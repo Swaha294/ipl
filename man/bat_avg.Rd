@@ -27,10 +27,4 @@ bat_avg("V Kohli", 2019)
 # Compute batting averages of Virat Kohli, MS Dhoni, Rohit Sharma in
 # 2017, 2018, and 2019
 bat_avg(c("V Kohli", "MS Dhoni", "RG Sharma"), c(2017, 2018, 2019))
-
-
-
-
-
-
 }

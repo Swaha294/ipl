@@ -19,12 +19,6 @@ Calculate strike rate of a given batsman in a given season
 
 library(ipl)
 
- # Calculate the strike rate of MS Dhoni in the 2016 IPL season
+# Calculate the strike rate of MS Dhoni in the 2016 IPL season
 strike_rate("MS Dhoni", 2016)
-
-
-
-
-
-
 }

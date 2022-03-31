@@ -2,19 +2,21 @@
 % Please edit documentation in R/cents_halfcents.R
 \name{cents_halfcents}
 \alias{cents_halfcents}
-\title{Calculate the number of centuries and half-centuries made a batsman in a given season}
+\title{Calculate the number of centuries and half-centuries made a batsman in a given
+season}
 \usage{
 cents_halfcents(player, yr)
 }
 \arguments{
-\item{player}{The batsman for whom the number of centuries and half-centuries have to
-be calculated, as a character vectors}
+\item{player}{The batsman for whom the number of centuries and half-centuries
+have to be calculated, as a character vectors}
 
-\item{yr}{The season (year) for which the number of centuries and half-centuries for the given
-batsman have to be calculated, as a numeric vector}
+\item{yr}{The season (year) for which the number of centuries and
+half-centuries for the given batsman have to be calculated, as a numeric vector}
 }
 \description{
-Calculate the number of centuries and half-centuries made a batsman in a given season
+Calculate the number of centuries and half-centuries made a batsman in a given
+season
 }
 \examples{
 
@@ -24,7 +26,4 @@ library(ipl)
 # in the 2016 IPL season
 
 cents_halfcents("V Kohli", 2016)
-
-
-
 }
