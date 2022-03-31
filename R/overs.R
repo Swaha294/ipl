@@ -16,10 +16,9 @@
 #' @export
 #'
 overs <- function(player) {
-  if (player %in% bowlers$PLAYER) {
-    return(bowlers$Ov[bowlers$PLAYER == player])
-  }
-  else {
+  if (player %in% bowlers$player) {
+    return(bowlers$ov[bowlers$player == player])
+  } else {
     stop("Invalid player name, please input another name")
   }
 }

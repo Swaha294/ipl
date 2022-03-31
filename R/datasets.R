@@ -66,4 +66,4 @@
 #' }
 "bowlers"
 #' @source This dataset was obtained from Kaggle: [Bowlers]https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
-"deliveries"
+
