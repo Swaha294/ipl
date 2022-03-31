@@ -16,37 +16,25 @@ test_that("check strike rate", {
 })
 
 
+test_that("check for invalid input types", {
+  expect_error(
+    strike_rate(00, 2016),
+    regexp = "be a character"
+  )
+  expect_error(
+    strike_rate("V Kohli", "2016"),
+    regexp = "be a numeric"
+  )
+})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+test_that("check for when data not found", {
+  expect_error(
+    strike_rate("Kohli", 2016),
+    regexp = "not found"
+  )
+  expect_error(
+    strike_rate("V Kohli", 2000),
+    regexp = "not found"
+  )
+})
