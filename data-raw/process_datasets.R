@@ -11,9 +11,7 @@ deliveries <- read_csv("data-raw/ipl.csv") %>%
   select(id, year, date) %>%
   right_join(read_csv("data-raw/deliveries.csv"), by = c("id")) %>%
   mutate(
-    id = as.factor(id),
     year = as.numeric(year),
-    inning = as.factor(inning),
     non_boundary = as.factor(non_boundary),
     is_wicket = as.factor(is_wicket),
     extras_type = as.factor(extras_type),
