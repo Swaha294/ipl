@@ -20,7 +20,9 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/ipl)](https://CRAN.R-project.org/package=ipl)
 <!-- badges: end -->
 
-The goal of ipl is to ...
+The goal of `ipl` is to provide data and functions related to IPL matches and standard cricket statistics. This package allows users to avail of IPL data and conduct analysis of cricketers
+using functions of this package, which return data on the strike rate, batting average, and other
+commonly used cricket statistics. 
 
 
 ## Description
