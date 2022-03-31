@@ -15,7 +15,7 @@
 #'
 #' @export
 #'
-strike_rate <- function(player, yr) {
+bowlers_score <- function(player, yr) {
   bowler_names <- function(given_score) {
     bowlers_list <- list()
 
