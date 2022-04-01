@@ -11,7 +11,7 @@ toss_choice(team_name)
 \item{team_name}{a team for whom number batting versus fielding statistics have to be calculated}
 }
 \value{
-\code{toss_choice} returns a tibble with 2 columns and 1 rows
+\code{toss_choice} returns a tibble with 2 columns and 2 rows
 }
 \description{
 The number of times a team chooses to start batting and fielding in all the IPL
@@ -22,6 +22,4 @@ library(ipl)
 
 # The number of times Dehli Daredevils chooses to start batting and fielding
 toss_choice("Delhi Daredevils")
-
-
 }

@@ -9,22 +9,18 @@
 #'
 #' # Find the total number of sixes scored by Rohit Sharma
 #' sixes("Rohit Sharma")
-#'
-#'
 #' @importFrom magrittr "%>%"
 #' @import dplyr
 #' @export
 #'
-sixes <- function(player_name){
-  #batsman$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", batsman$PLAYER))
-  '%!in%'<-Negate(`%in%`)
+sixes <- function(player_name) {
   if (!is.character(player_name)) {
     stop("Invalid input: player input should be a character vector")
-  } else if (player_name %!in% batsman$player) {
+  } else if (!(player_name %in% batsman$player)) {
     stop("Invalid player name")
   }
-  sixes<-batsman%>%
-    select(player, num_6s)%>%
+  sixes <- batsman %>%
+    select(player, num_6s) %>%
     filter(player == player_name)
-  return(sixes[1,2])
+  return(sixes[1, 2])
 }

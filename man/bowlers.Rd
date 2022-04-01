@@ -9,7 +9,7 @@ A data frame of 100 rows for all the bowlers
 \describe{
 \item{pos}{The position of the player in the 1 to 100 ranking}
 \item{player}{Player name}
-\item{mat}{ }
+\item{mat}{Number of matches played by bowler}
 \item{inns}{The number of innings}
 \item{ov}{The number of overs}
 \item{runs}{The number of runs}
@@ -18,8 +18,8 @@ A data frame of 100 rows for all the bowlers
 \item{avg}{The average bowling score for the player}
 \item{econ}{bowler economy}
 \item{sr}{The strike rate of the bowler}
-\item{x4w}{The number of innings in which the bowler took exactly four wickets}
-\item{x5w}{the number of innings in which the bowler took exactly five wickets}
+\item{num_4w}{The number of innings in which the bowler took exactly four wickets}
+\item{num_5w}{the number of innings in which the bowler took exactly five wickets}
 }
 }
 \source{

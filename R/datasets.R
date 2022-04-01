@@ -55,27 +55,28 @@
 #' \item{id}{Unique match ID of the IPL match as per ESPNCricinfo}
 #' \item{city}{City in which the match took place}
 #' \item{date}{Date of the match}
+#' \item{year}{Year (season) of IPL match}
 #' \item{player_of_match}{Recipient of the player of match award}
 #' \item{venue}{Venue where the match took place}
-#' \item{neutral venue}{Neutral }
+#' \item{neutral_venue}{Neutral }
 #' \item{team1}{First team name}
 #' \item{team2}{Second team name}
 #' \item{toss_winner}{Winner of the coin toss}
 #' \item{toss_decision}{Whether toss winning team chose to bat or field first}
 #' \item{winner}{Winning team}
 #' \item{result}{Wickets or Runs}
-#' \item{results_margin}{Margin won by}
+#' \item{result_margin}{Margin won by}
 #' \item{eliminator}{Y/N advanced to The Humdred Eliminator}
 #' \item{method}{Method used to calculate the target score}
 #' \item{umpire1}{Name of first umpire}
 #' \item{umpire2}{Name of second umpire}
 #' }
 #' @source This dataset was obtained from Kaggle: [IPL Matches 2008-2020](https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020?select=IPL+Matches+2008-2020.csv)
+"ipl"
 
 
 
-
-#' This file contains all the details of the top 100 bowlers
+#' This file contains all the details of the top 100 batsmen
 #'
 #' @format A data frame of 100 rows representing the stats of the top 100 batsman
 #' \describe{
@@ -118,4 +119,3 @@
 #' }
 #' @source This dataset was obtained from Kaggle: [Bowlers](https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
 "bowlers"
-

@@ -20,6 +20,4 @@ library(ipl)
 
 # Find the total number of sixes scored by Rohit Sharma
 sixes("Rohit Sharma")
-
-
 }

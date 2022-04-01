@@ -1,8 +1,13 @@
 library(dplyr)
 library(testthat)
 
+df <- tibble(
+  "toss_decision" = c("bat", "field"),
+  "num" = c(24, 33)
+)
+
 test_that("check toss choice", {
-  expect_length(toss_choice("Sunrisers Hyderabad"), 3)
+  expect_length(toss_choice("Sunrisers Hyderabad"), 2)
 })
 
 test_that("check for invalid input types", {

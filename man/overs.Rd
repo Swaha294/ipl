@@ -4,10 +4,10 @@
 \alias{overs}
 \title{Calculates the number of overs for the given bowler}
 \usage{
-overs(player)
+overs(player_name)
 }
 \arguments{
-\item{player}{The bowler whose overs has to be calculated, as a character vector}
+\item{player_name}{The bowler whose overs has to be calculated, as a character vector}
 }
 \value{
 \code{overs} returns the number of overs
