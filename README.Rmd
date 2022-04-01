@@ -78,12 +78,22 @@ winloss("Sunrisers Hyderabad", 2017)
 toss_choice("Delhi Daredevils")
 ```
 
-7. Find a batsman's total number of sixes
+7. Calculate Rahul Sharma's bowler score
+```{r}
+bowler_score("Rahul Sharma")
+```
+
+8. Calculate Rahul Sharma's overs
+```{r}
+overs("Rahul Sharma")
+```
+
+9. Find a batsman's total number of sixes
 ```{r}
 sixes("Rohit Sharma")
 ```
 
-8. Find a batsman's total number of fours
+10. Find a batsman's total number of fours
 ```{r}
 fours("Suresh Raina")
 ```
