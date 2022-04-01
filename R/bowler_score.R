@@ -16,8 +16,7 @@
 #' @export
 #'
 
-bowlers_score <- function(player, yr) {
-  bowler_names <- function(given_score) {
+bowlers_score <- function(given_score) {
     bowlers_list <- list()
 
     # Ensures that it is a valid score
@@ -30,5 +29,4 @@ bowlers_score <- function(player, yr) {
     } else if (given_score > max(bowlers$avg)) {
       stop("Invalid score. Please input a lower number.")
     }
-  }
 }
