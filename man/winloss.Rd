@@ -19,9 +19,8 @@ given team has to be calculated}
 Calculates the wins, losses, and win percentage for a team based on their starting position (batting or fielding)
 }
 \examples{
-Calculates the wins, losses, and win percentage for Sunrisers Hyderabad in 2017
-winloss("Sunrisers Hyderabad", 2017)
-
 library(ipl)
+# Calculates the wins, losses, and win percentage for Sunrisers Hyderabad in 2017
+winloss("Sunrisers Hyderabad", 2017)
 
 }

@@ -16,9 +16,10 @@ sixes(player_name)
 Find a batsman's total number of sixes
 }
 \examples{
-Compute the total number of sixes scored by Rohit Sharma
+library(ipl)
+
+# Find the total number of sixes scored by Rohit Sharma
 sixes("Rohit Sharma")
 
-library(ipl)
 
 }

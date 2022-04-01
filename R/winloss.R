@@ -7,10 +7,9 @@
 #' @return `winloss` returns a tibble with 3 columns and 3 rows
 #'
 #' @examples
-#' Calculates the wins, losses, and win percentage for Sunrisers Hyderabad in 2017
-#' winloss("Sunrisers Hyderabad", 2017)
-#'
 #' library(ipl)
+#' # Calculates the wins, losses, and win percentage for Sunrisers Hyderabad in 2017
+#' winloss("Sunrisers Hyderabad", 2017)
 #'
 #' @importFrom magrittr "%>%"
 #' @import dplyr

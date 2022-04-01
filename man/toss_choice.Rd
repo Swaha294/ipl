@@ -18,9 +18,10 @@ toss_choice(team_name)
 The number of times a team chooses to start batting and fielding
 }
 \examples{
-The number of times Dehli Daredevils chooses to start batting and fielding
+library(ipl)
+
+# The number of times Dehli Daredevils chooses to start batting and fielding
 toss_choice("Delhi Daredevils")
 
-library(ipl)
 
 }

@@ -5,10 +5,11 @@
 #' @return `sixes` return number of sixes for the given player as a value
 #'
 #' @examples
-#' Compute the total number of sixes scored by Rohit Sharma
+#' library(ipl)
+#'
+#' # Find the total number of sixes scored by Rohit Sharma
 #' sixes("Rohit Sharma")
 #'
-#' library(ipl)
 #'
 #' @importFrom magrittr "%>%"
 #' @import dplyr
