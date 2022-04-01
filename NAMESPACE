@@ -2,7 +2,9 @@
 
 export(bat_avg)
 export(bat_max)
+export(bowler_names)
 export(cents_halfcents)
+export(overs)
 export(strike_rate)
 import(dplyr)
 importFrom(magrittr,"%>%")

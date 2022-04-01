@@ -146,3 +146,10 @@ usethis::use_data(batsman, overwrite = TRUE)
 # ipl
 ipl <- read_csv("data-raw/ipl.csv")
 usethis::use_data(ipl, overwrite = TRUE)
+
+## Clean the Bowlers data
+bowlers <- read_csv("data-raw/bowlers.csv")
+bowlers$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", bowlers$PLAYER))
+bowlers <- bowlers %>%
+  janitor::clean_names()
+usethis::use_data(bowlers, overwrite = TRUE)

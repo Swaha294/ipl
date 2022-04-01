@@ -69,3 +69,26 @@
 #' }
 #' @source This dataset was obtained from Kaggle: [Top_100_Batsman](https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset?select=Top_100_bowlers.xlsx).
 "batsman"
+
+
+#' This file contains all the details of the top 100 bowlers
+#'
+#' @format A data frame of 100 rows for all the bowlers
+#' \describe{
+#' \item{pos}{The position of the player in the 1 to 100 ranking}
+#' \item{player}{Player name}
+#' \item{mat}{ }
+#' \item{inns}{The number of innings}
+#' \item{ov}{The number of overs}
+#' \item{runs}{The number of runs}
+#' \item{wkts}{The number of wickets}
+#' \item{bbi}{Best Bowling in Innings (BBI) gives the score for one inning}
+#' \item{avg}{ }
+#' \item{econ}{ }
+#' \item{sr}{ }
+#' \item{x4w}{ }
+#' \item{x5v}{ }
+#' }
+#' @source This dataset was obtained from Kaggle: [Bowlers]https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
+"bowlers"
+
