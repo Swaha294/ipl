@@ -52,20 +52,20 @@
 #'
 #' @format A data frame of 100 rows representing the stats of the top 100 batsman
 #' \describe{
-#' \item{POS}
-#' \item{PLAYER}
-#' \item{Mat}
-#' \item{Inns}
-#' \item{NO}
-#' \item{Runs}
-#' \item{HS}
-#' \item{Avg}
-#' \item{BF}
-#' \item{SR}
-#' \item{100}
-#' \item{50}
-#' \item{4s}
-#' \item{6s}
+#' \item{pos}
+#' \item{player}
+#' \item{mat}
+#' \item{inns}
+#' \item{no}
+#' \item{runs}
+#' \item{hs}
+#' \item{avg}
+#' \item{bf}
+#' \item{sr}
+#' \item{x100}
+#' \item{x50}
+#' \item{x4s}
+#' \item{x6s}
 #' }
 #' @source This dataset was obtained from Kaggle: [Top_100_Batsman](https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset?select=Top_100_bowlers.xlsx).
 "batsman"
@@ -87,7 +87,7 @@
 #' \item{econ}{ }
 #' \item{sr}{ }
 #' \item{x4w}{ }
-#' \item{x5v}{ }
+#' \item{x5w}{ }
 #' }
 #' @source This dataset was obtained from Kaggle: [Bowlers]https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
 "bowlers"
