@@ -6,6 +6,8 @@ Authors@R:
            comment = c(ORCID = "YOUR-ORCID-ID"))
     person("Anushree", "Goswami", , "anushreeegoswami@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Haley", "Schmidt", , " ", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: 
     This package has data on IPL all IPL matches played in the years 2008-2020. 
     It contains functions to calculate the batting average, maximum runs made, strike rate, 
