@@ -10,7 +10,7 @@ bowler_score(given_score)
 \item{given_score}{The avg score for which we want all the bowler's names for, as a numeric vector}
 }
 \value{
-\code{bowlers_score} returns a list of names.
+\code{bowler_score} returns a list of names.
 }
 \description{
 Returns all the bowlers with an average score higher than the given score
@@ -20,5 +20,5 @@ Returns all the bowlers with an average score higher than the given score
 library(ipl)
 
 # Finds all the bowlers with an average score higher than 30
-bowler_names(30)
+bowler_score(30)
 }

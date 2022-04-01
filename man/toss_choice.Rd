@@ -2,20 +2,20 @@
 % Please edit documentation in R/toss_choice.R
 \name{toss_choice}
 \alias{toss_choice}
-\title{The number of times a team chooses to start batting and fielding}
+\title{The number of times a team chooses to start batting and fielding in all the IPL
+matches they have played}
 \usage{
 toss_choice(team_name)
 }
 \arguments{
 \item{team_name}{a team for whom number batting versus fielding statistics have to be calculated}
-
-\item{year}{a list of seasons (years) for which the statistics of the given team have to be calculated}
 }
 \value{
 \code{toss_choice} returns a tibble with 2 columns and 1 rows
 }
 \description{
-The number of times a team chooses to start batting and fielding
+The number of times a team chooses to start batting and fielding in all the IPL
+matches they have played
 }
 \examples{
 library(ipl)
