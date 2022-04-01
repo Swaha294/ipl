@@ -1,4 +1,4 @@
-clibrary(dplyr)
+library(dplyr)
 library(testthat)
 
 test_that("check sixes", {

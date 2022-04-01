@@ -89,6 +89,6 @@
 #' \item{x4w}{The number of innings in which the bowler took exactly four wickets}
 #' \item{x5w}{the number of innings in which the bowler took exactly five wickets}
 #' }
-#' @source This dataset was obtained from Kaggle: [Bowlers]https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
+#' @source This dataset was obtained from Kaggle: [Bowlers](https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
 "bowlers"
 
