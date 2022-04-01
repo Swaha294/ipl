@@ -7,7 +7,7 @@
 sixes(player_name)
 }
 \arguments{
-\item{player}{a batsman for whom we want to calculate the number of sixes they scored}
+\item{player_name}{a batsman for whom we want to calculate the number of sixes they scored}
 }
 \value{
 \code{sixes} return number of sixes for the given player as a value
