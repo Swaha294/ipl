@@ -24,7 +24,7 @@ sixes <- function(player_name){
     stop("Invalid player name")
   }
   sixes<-batsman%>%
-    select(player,x6s)%>%
+    select(player, num_6s)%>%
     filter(player == player_name)
   return(sixes[1,2])
 }

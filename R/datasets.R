@@ -52,16 +52,16 @@
 #'
 #' @format A data frame of 816 rows containing the information about all matches from 2008 to 2020
 #' \describe{
-#' \item{id}{ID}
+#' \item{id}{Unique match ID of the IPL match as per ESPNCricinfo}
 #' \item{city}{City in which the match took place}
 #' \item{date}{Date of the match}
 #' \item{player_of_match}{Recipient of the player of match award}
 #' \item{venue}{Venue where the match took place}
-#' \item{neutral venue}{}
+#' \item{neutral venue}{Neutral }
 #' \item{team1}{First team name}
 #' \item{team2}{Second team name}
 #' \item{toss_winner}{Winner of the coin toss}
-#' \item{toss_decision}{Starting position chosen but toss winner}
+#' \item{toss_decision}{Whether toss winning team chose to bat or field first}
 #' \item{winner}{Winning team}
 #' \item{result}{Wickets or Runs}
 #' \item{results_margin}{Margin won by}
@@ -84,15 +84,15 @@
 #' \item{mat}{Number of matches played by the batsman}
 #' \item{inns}{The number of innings played by the batsman}
 #' \item{no}{Number of times the batsman was not out at the end of an inning}
-#' \item{runs}{The number of runs}
+#' \item{runs}{The total number of runs made by the batsman}
 #' \item{hs}{Highest score ever made by the batsman}
 #' \item{avg}{Average batting score}
 #' \item{bf}{Number of balls faced by the batsman}
-#' \item{sr}{The strike rate of the batsman}
-#' \item{x100}{The number of innings where the batsman scored one hundred or more runs}
-#' \item{x50}{The number of innings where the batsman scored fifty to ninety runs}
-#' \item{x4s}{Number of 4s scored by the batsman}
-#' \item{x6s}{Number of 6s scored by the batsman}
+#' \item{sr}{The overall strike rate of the batsman}
+#' \item{num_100}{The number of innings where the batsman scored one hundred or more runs}
+#' \item{num_50}{The number of innings where the batsman scored fifty to ninety runs}
+#' \item{num_4s}{Number of 4s scored by the batsman}
+#' \item{num_6s}{Number of 6s scored by the batsman}
 #' }
 #' @source This dataset was obtained from Kaggle: [Top_100_Batsman](https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset?select=Top_100_bowlers.xlsx).
 "batsman"
@@ -104,7 +104,7 @@
 #' \describe{
 #' \item{pos}{The position of the player in the 1 to 100 ranking}
 #' \item{player}{Player name}
-#' \item{mat}{ }
+#' \item{mat}{Number of matches played by bowler}
 #' \item{inns}{The number of innings}
 #' \item{ov}{The number of overs}
 #' \item{runs}{The number of runs}
@@ -113,8 +113,8 @@
 #' \item{avg}{The average bowling score for the player}
 #' \item{econ}{bowler economy}
 #' \item{sr}{The strike rate of the bowler}
-#' \item{x4w}{The number of innings in which the bowler took exactly four wickets}
-#' \item{x5w}{the number of innings in which the bowler took exactly five wickets}
+#' \item{num_4w}{The number of innings in which the bowler took exactly four wickets}
+#' \item{num_5w}{the number of innings in which the bowler took exactly five wickets}
 #' }
 #' @source This dataset was obtained from Kaggle: [Bowlers](https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
 "bowlers"

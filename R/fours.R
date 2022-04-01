@@ -15,15 +15,13 @@
 #' @export
 #'
 fours <- function(player_name){
-  #batsman$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", batsman$PLAYER))
-  '%!in%' <- Negate(`%in%`)
   if (!is.character(player_name)) {
     stop("Invalid input: player input should be a character vector")
-  } else if (player_name %!in% batsman$player) {
+  } else if (!(player_name %in% batsman$player)) {
     stop("Invalid player name")
   }
   fours <- batsman %>%
-    select(player, x4s)%>%
+    select(player, num_4s)%>%
     filter(player == player_name)
   return(fours[1, 2])
 }
