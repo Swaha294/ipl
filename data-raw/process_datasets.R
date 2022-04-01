@@ -139,7 +139,7 @@ teams <- teams %>%
 usethis::use_data(teams, overwrite = TRUE)
 
 # Clean batsman dataset
-batsman <- read_excel("data-raw/batsman.xlsx")
+batsman <- read_csv("data-raw/batsman.csv")
   batsman$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", batsman$PLAYER))
 usethis::use_data(batsman, overwrite = TRUE)
 

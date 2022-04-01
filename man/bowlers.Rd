@@ -22,6 +22,9 @@ A data frame of 100 rows for all the bowlers
 \item{x5v}{ }
 }
 }
+\source{
+This dataset was obtained from Kaggle: \link{Bowlers}https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
+}
 \usage{
 bowlers
 }
