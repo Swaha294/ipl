@@ -1,8 +1,8 @@
 #' Returns all the bowlers with an average score higher than the given score
 #'
-#' @param score The score for which we want all the bowler's names for, as a numeric vector
+#' @param given_score The score for which we want all the bowler's names for, as a numeric vector
 #'
-#' @return `bowlers_list` returns a list of names.
+#' @return `bowlers_score` returns a list of names.
 #'
 #' @examples
 #'
@@ -16,7 +16,7 @@
 #' @export
 #'
 
-bowlers_score <- function(given_score) {
+bowlers_score <- function(score) {
     bowlers_list <- list()
 
     # Ensures that it is a valid score
