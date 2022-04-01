@@ -1,5 +1,3 @@
-context("winloss")
-
 library(dplyr)
 library(testthat)
 

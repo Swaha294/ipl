@@ -1,5 +1,3 @@
-context("fours")
-
 library(dplyr)
 library(testthat)
 

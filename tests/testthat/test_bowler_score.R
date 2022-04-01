@@ -1,5 +1,3 @@
-context("bowler_score")
-
 library(tibble)
 library(dplyr)
 library(testthat)

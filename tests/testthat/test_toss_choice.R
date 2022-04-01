@@ -1,10 +1,8 @@
-context("winloss")
-
 library(dplyr)
 library(testthat)
 
 test_that("check toss choice", {
-  expect_length(toss_choice("Sunrisers Hyderabad"), 2)
+  expect_length(toss_choice("Sunrisers Hyderabad"), 3)
 })
 
 test_that("check for invalid input types", {

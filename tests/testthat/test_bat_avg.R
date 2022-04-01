@@ -1,5 +1,3 @@
-context("bat_avg")
-
 library(tibble)
 library(dplyr)
 library(testthat)

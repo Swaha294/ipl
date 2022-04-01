@@ -1,5 +1,3 @@
-context("Dimensions of data")
-
 library(testthat)
 
 

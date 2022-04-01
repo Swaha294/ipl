@@ -1,6 +1,4 @@
-context("sixes")
-
-library(dplyr)
+clibrary(dplyr)
 library(testthat)
 
 test_that("check sixes", {
