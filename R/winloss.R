@@ -30,7 +30,7 @@ winloss <- function(team_name, year) {
     stop("Invalid team name")
   }
   winloss <- IPL_matches %>%
-    dplyr::filter(
+    filter(
       years == year,
       team1 == team_name | team2 == team_name
     ) %>%

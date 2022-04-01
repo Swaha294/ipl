@@ -24,7 +24,7 @@ toss_choice <- function(team_name){
     stop("Invalid team name")
   }
   toss_decision <- ipl %>%
-    dplyr::filter(
+    filter(
       toss_winner == team_name
     ) %>%
     summarize(
