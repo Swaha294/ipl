@@ -138,6 +138,14 @@ teams <- teams %>%
   ungroup()
 usethis::use_data(teams, overwrite = TRUE)
 
+# Clean batsman dataset
+batsman <- read_excel("data-raw/batsman.xlsx")
+  batsman$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", batsman$PLAYER))
+usethis::use_data(batsman, overwrite = TRUE)
+
+# ipl
+ipl <- read_csv("data-raw/ipl.csv")
+usethis::use_data(ipl, overwrite = TRUE)
 
 ## Clean the Bowlers data
 bowlers <- read_csv("data-raw/bowlers.csv")
