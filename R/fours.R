@@ -5,10 +5,10 @@
 #' @return `sixes` return number of fours for the given player as a value
 #'
 #' @examples
-#' Compute the total number of fours scored by Suresh Raina
+#' library(ipl)
+#' # Find the total number of fours scored by Suresh Raina
 #' fours("Suresh Raina")
 #'
-#' library(ipl)
 #'
 #' @importFrom magrittr "%>%"
 #' @import dplyr

@@ -6,10 +6,11 @@
 #' @return `toss_choice` returns a tibble with 2 columns and 1 rows
 #'
 #' @examples
-#' The number of times Dehli Daredevils chooses to start batting and fielding
+#' library(ipl)
+#'
+#' # The number of times Dehli Daredevils chooses to start batting and fielding
 #' toss_choice("Delhi Daredevils")
 #'
-#' library(ipl)
 #'
 #' @importFrom magrittr "%>%"
 #' @import dplyr
