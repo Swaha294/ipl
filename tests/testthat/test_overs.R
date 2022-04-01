@@ -16,9 +16,9 @@ test_that("check for invalid input types", {
 
 test_that("check for when data not found", {
   expect_error(
-    expect_error(overs("Sharma"), regexp = "Invalid player name, please input another name")
+    overs("Sharma"), regexp = "input another name"
   )
   expect_error(
-    expect_error(overs("Rahul"), regexp = "Invalid player name, please input another name")
+    overs("Rahul"), regexp = "input another name"
   )
 })

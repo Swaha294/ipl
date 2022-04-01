@@ -29,7 +29,7 @@ winloss <- function(team_name, year) {
   } else if (team_name %!in% ipl$team1 | team_name %!in% ipl$team2) {
     stop("Invalid team name")
   }
-  winloss <- IPL_matches %>%
+  winloss <- ipl %>%
     filter(
       years == year,
       team1 == team_name | team2 == team_name

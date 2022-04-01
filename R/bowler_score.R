@@ -16,7 +16,7 @@
 #' @export
 #'
 
-bowlers_score <- function(score) {
+bowler_score <- function(given_score) {
     bowlers_list <- list()
 
     # Ensures that it is a valid score
