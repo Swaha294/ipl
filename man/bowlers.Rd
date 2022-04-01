@@ -19,8 +19,11 @@ A data frame of 100 rows for all the bowlers
 \item{econ}{ }
 \item{sr}{ }
 \item{x4w}{ }
-\item{x5v}{ }
+\item{x5w}{ }
 }
+}
+\source{
+This dataset was obtained from Kaggle: \link{Bowlers}https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
 }
 \usage{
 bowlers

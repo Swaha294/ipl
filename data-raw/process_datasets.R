@@ -1,9 +1,10 @@
 ## Ball-by-ball information of IPL matches in 2008 - 2020
 
 library(tidyverse)
+library(janitor)
 
 deliveries <- read_csv("data-raw/ipl.csv") %>%
-  janitor::clean_names() %>%
+  clean_names() %>%
   mutate(
     date = as.Date(date, "%Y-%m-%d"),
     year = format(date, "%Y")
@@ -139,17 +140,21 @@ teams <- teams %>%
 usethis::use_data(teams, overwrite = TRUE)
 
 # Clean batsman dataset
-batsman <- read_excel("data-raw/batsman.xlsx")
-  batsman$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", batsman$PLAYER))
+batsman <- read_csv("data-raw/batsman.csv")
+batsman$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", batsman$PLAYER))
+batsman <- batsman %>%
+  clean_names()
 usethis::use_data(batsman, overwrite = TRUE)
 
 # ipl
-ipl <- read_csv("data-raw/ipl.csv")
+ipl <- read_csv("data-raw/ipl.csv") %>%
+  clean_names()
+
 usethis::use_data(ipl, overwrite = TRUE)
 
 ## Clean the Bowlers data
 bowlers <- read_csv("data-raw/bowlers.csv")
 bowlers$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", bowlers$PLAYER))
 bowlers <- bowlers %>%
-  janitor::clean_names()
+  clean_names()
 usethis::use_data(bowlers, overwrite = TRUE)
