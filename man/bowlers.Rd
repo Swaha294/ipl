@@ -19,7 +19,7 @@ A data frame of 100 rows for all the bowlers
 \item{econ}{ }
 \item{sr}{ }
 \item{x4w}{ }
-\item{x5v}{ }
+\item{x5w}{ }
 }
 }
 \source{

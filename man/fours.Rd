@@ -4,10 +4,10 @@
 \alias{fours}
 \title{Find a batsman's total number of fours}
 \usage{
-fours(player)
+fours(player_name)
 }
 \arguments{
-\item{player}{a batsman for whom we want to calculate the number of fours they scored}
+\item{player_name}{a batsman for whom we want to calculate the number of fours they scored}
 }
 \value{
 \code{sixes} return number of fours for the given player as a value
