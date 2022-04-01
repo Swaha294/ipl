@@ -59,10 +59,13 @@
 #' \item{inns}{The number of innings}
 #' \item{ov}{The number of overs}
 #' \item{runs}{The number of runs}
-#' \item{wks}{The number of wickets}
+#' \item{wkts}{The number of wickets}
 #' \item{bbi}{Best Bowling in Innings (BBI) gives the score for one inning}
 #' \item{avg}{ }
 #' \item{econ}{ }
+#' \item{sr}{ }
+#' \item{x4w}{ }
+#' \item{x5v}{ }
 #' }
 "bowlers"
 #' @source This dataset was obtained from Kaggle: [Bowlers]https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
