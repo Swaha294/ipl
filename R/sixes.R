@@ -1,4 +1,4 @@
-#'Find a batsman's total number of sixes
+#' Find a batsman's total number of sixes
 #'
 #' @param player a batsman for whom we want to calculate the number of sixes they scored
 #'
@@ -17,7 +17,9 @@
 sixes <- function(player_name){
   batsman$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", batsman$PLAYER))
   '%!in%'<-Negate(`%in%`)
-  if(player_name %!in% batsman$PLAYER){
+  if (!is.character(player)) {
+    stop("Invalid input: player input should be a character vector")
+  } else if (player %!in% batsman$PLAYER) {
     stop("Invalid player name")
   }
   sixes<-batsman%>%

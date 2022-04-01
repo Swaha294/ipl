@@ -17,7 +17,9 @@
 fours <- function(player){
   batsman$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", batsman$PLAYER))
   '%!in%' <- Negate(`%in%`)
-  if (player %!in% batsman$PLAYER) {
+  if (!is.character(player)) {
+    stop("Invalid input: player input should be a character vector")
+  } else if (player %!in% batsman$PLAYER) {
     stop("Invalid player name")
   }
   fours <- batsman %>%

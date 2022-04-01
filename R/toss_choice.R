@@ -17,7 +17,9 @@
 #'
 toss_choice <- function(team_name){
   '%!in%' <- Negate(`%in%`)
-  if (team_name %!in% ipl$team1 | team_name %!in% ipl$team2) {
+  if (!is.character(team_name)) {
+    stop("Invalid input: team name input should be a character vector")
+  } else if (team_name %!in% ipl$team1 | team_name %!in% ipl$team2) {
     stop("Invalid team name")
   }
   toss_decision <- ipl %>%

@@ -19,15 +19,20 @@
 #'
 winloss <- function(team_name, year) {
   '%!in%' <- Negate(`%in%`)
-  if (year > 2020 | year < 2008) {
-    stop("Invalid year (try a year between 2008 and 2020)")
-  }
-  if (team_name %!in% ipl$team1 | team_name %!in% ipl$team2) {
+  ipl$date <- as.Date(ipl$date, tryFormats = c("%Y-%m-%d"))
+  ipl$years <- as.numeric(format(ipl$date, "%Y"))
+  if (!is.character(team_name)) {
+    stop("Invalid input: team name input should be a character vector")
+  } else if (!is.numeric(year)) {
+    stop("Invalid input: year input should be a numeric vector")
+  } else if (year > 2020 | year < 2008) {
+    stop("Invalid year")
+  } else if (team_name %!in% ipl$team1 | team_name %!in% ipl$team2) {
     stop("Invalid team name")
   }
-  winloss_tbl <- ipl %>%
+  winloss <- IPL_matches %>%
     dplyr::filter(
-      year == year,
+      years == year,
       team1 == team_name | team2 == team_name
     ) %>%
     group_by(toss_decision) %>%
@@ -39,7 +44,6 @@ winloss <- function(team_name, year) {
     ) %>%
     adorn_totals("row")
 
-  winloss_tbl[3, 4] = winloss_tbl[3, 4]/2
-
-  return(winloss_tbl)
+  winloss[3, 4] = winloss[3, 4]/2
+  return(winloss)
 }
