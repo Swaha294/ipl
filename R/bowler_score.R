@@ -2,25 +2,27 @@
 #'
 #' @param given_score The avg score for which we want all the bowler's names for, as a numeric vector
 #'
-#' @return `bowlers_score` returns a list of names.
+#' @return `bowler_score` returns a list of names.
 #'
 #' @examples
 #'
 #' library(ipl)
 #'
 #' # Finds all the bowlers with an average score higher than 30
-#' bowler_names(30)
+#' bowler_score(30)
 #' @importFrom magrittr "%>%"
 #' @import dplyr
 #'
 #' @export
 #'
 
-bowlers_score <- function(score) {
+bowler_score <- function(given_score) {
     bowlers_list <- list()
 
     # Ensures that it is a valid score
-    if (given_score < 0) {
+    if (!is.numeric(given_score)) {
+      stop(paste0("Invalid input: ", given_score, " must be a numeric vector"))
+    } else if (given_score < 0) {
       stop("Invalid score. Must be greater than 0.")
     } else if (given_score >= 0 & given_score <= max(bowlers$avg)) {
       # Retrieves all the bowlers with an avg score greater than given_score

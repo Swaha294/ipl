@@ -21,10 +21,10 @@ test_that("check for invalid input types", {
 test_that("check for when data not found", {
   expect_error(
     winloss("Dehli", 2017),
-    regexp = "not found"
+    regexp = "Invalid"
   )
   expect_error(
-    bat_max("Dehli Daredevild", 2000),
-    regexp = "not found"
+    winloss("Dehli Daredevils", 2000),
+    regexp = "Invalid"
   )
 })

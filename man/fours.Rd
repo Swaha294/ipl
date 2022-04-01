@@ -16,9 +16,9 @@ fours(player_name)
 Find a batsman's total number of fours
 }
 \examples{
-Compute the total number of fours scored by Suresh Raina
+library(ipl)
+# Find the total number of fours scored by Suresh Raina
 fours("Suresh Raina")
 
-library(ipl)
 
 }

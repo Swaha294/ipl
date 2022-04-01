@@ -7,10 +7,9 @@
 #' @return `winloss` returns a tibble with 3 columns and 3 rows
 #'
 #' @examples
-#' Calculates the wins, losses, and win percentage for Sunrisers Hyderabad in 2017
-#' winloss("Sunrisers Hyderabad", 2017)
-#'
 #' library(ipl)
+#' # Calculates the wins, losses, and win percentage for Sunrisers Hyderabad in 2017
+#' winloss("Sunrisers Hyderabad", 2017)
 #'
 #' @importFrom magrittr "%>%"
 #' @import dplyr
@@ -30,8 +29,8 @@ winloss <- function(team_name, year) {
   } else if (team_name %!in% ipl$team1 | team_name %!in% ipl$team2) {
     stop("Invalid team name")
   }
-  winloss <- IPL_matches %>%
-    dplyr::filter(
+  winloss <- ipl %>%
+    filter(
       years == year,
       team1 == team_name | team2 == team_name
     ) %>%

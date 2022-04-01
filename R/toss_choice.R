@@ -1,34 +1,36 @@
-#' The number of times a team chooses to start batting and fielding
+#' The number of times a team chooses to start batting and fielding in all the IPL
+#' matches they have played
 #'
 #' @param team_name a team for whom number batting versus fielding statistics have to be calculated
-#' @param year a list of seasons (years) for which the statistics of the given team have to be calculated
 #'
 #' @return `toss_choice` returns a tibble with 2 columns and 1 rows
 #'
 #' @examples
-#' The number of times Dehli Daredevils chooses to start batting and fielding
+#' library(ipl)
+#'
+#' # The number of times Dehli Daredevils chooses to start batting and fielding
 #' toss_choice("Delhi Daredevils")
 #'
-#' library(ipl)
 #'
 #' @importFrom magrittr "%>%"
 #' @import dplyr
 #' @export
 #'
 toss_choice <- function(team_name){
-  '%!in%' <- Negate(`%in%`)
   if (!is.character(team_name)) {
     stop("Invalid input: team name input should be a character vector")
-  } else if (team_name %!in% ipl$team1 | team_name %!in% ipl$team2) {
+  } else if (!(team_name %in% ipl$team1) | !(team_name %in% ipl$team2)) {
     stop("Invalid team name")
-  }
-  toss_decision <- ipl %>%
-    dplyr::filter(
+  } else {
+    toss_decision <- ipl %>%
+    filter(
       toss_winner == team_name
     ) %>%
+    group_by(toss_decision) %>%
     summarize(
       bat = sum(toss_decision == "bat"),
       field = sum(toss_decision == "field")
     )
-  return(toss_choice)
+    return(toss_decision)
+  }
 }
