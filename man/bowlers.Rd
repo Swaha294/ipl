@@ -15,11 +15,11 @@ A data frame of 100 rows for all the bowlers
 \item{runs}{The number of runs}
 \item{wkts}{The number of wickets}
 \item{bbi}{Best Bowling in Innings (BBI) gives the score for one inning}
-\item{avg}{ }
-\item{econ}{ }
-\item{sr}{ }
-\item{x4w}{ }
-\item{x5w}{ }
+\item{avg}{The average bowling score for the player}
+\item{econ}{bowler economy}
+\item{sr}{The strike rate of the bowler}
+\item{x4w}{The number of innings in which the bowler took exactly four wickets}
+\item{x5w}{the number of innings in which the bowler took exactly five wickets}
 }
 }
 \source{
