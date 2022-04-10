@@ -9,7 +9,7 @@ A data frame of 100 rows for all the bowlers
 \describe{
 \item{pos}{The position of the player in the 1 to 100 ranking}
 \item{player}{Player name}
-\item{mat}{ }
+\item{mat}{Number of matches played by bowler}
 \item{inns}{The number of innings}
 \item{ov}{The number of overs}
 \item{runs}{The number of runs}
@@ -18,12 +18,17 @@ A data frame of 100 rows for all the bowlers
 \item{avg}{The average bowling score for the player}
 \item{econ}{bowler economy}
 \item{sr}{The strike rate of the bowler}
+<<<<<<< HEAD
 \item{x4w}{The number of innings in which the bowler took exactly four wickets}
 \item{x5w}{the number of innings in which the bowler took exactly five wickets}
+=======
+\item{num_4w}{The number of innings in which the bowler took exactly four wickets}
+\item{num_5w}{the number of innings in which the bowler took exactly five wickets}
+>>>>>>> 8ffb968760ba7762fa7113f41af7e1e6fcaea607
 }
 }
 \source{
-This dataset was obtained from Kaggle: \link{Bowlers}https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
+This dataset was obtained from Kaggle: \href{https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset}{Bowlers}.
 }
 \usage{
 bowlers

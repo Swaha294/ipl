@@ -1,5 +1,3 @@
-context("strike_rate")
-
 library(tibble)
 library(dplyr)
 library(testthat)

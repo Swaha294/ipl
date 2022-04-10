@@ -1,5 +1,3 @@
-context("cents_halfcents")
-
 library(tibble)
 library(dplyr)
 library(testthat)

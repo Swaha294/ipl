@@ -19,6 +19,4 @@ Find a batsman's total number of fours
 library(ipl)
 # Find the total number of fours scored by Suresh Raina
 fours("Suresh Raina")
-
-
 }

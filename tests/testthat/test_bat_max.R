@@ -1,5 +1,3 @@
-context("bat_max")
-
 library(tibble)
 library(dplyr)
 library(testthat)

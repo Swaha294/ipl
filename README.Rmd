@@ -68,32 +68,27 @@ cents_halfcents("V Kohli", 2016)
 strike_rate("V Kohli", 2016)
 ```
 
-5. Calculates the wins, losses, and win percentage for a team based on their starting position (batting or fielding)
-```{r}
-winloss("Sunrisers Hyderabad", 2017)
-```
-
-6. Calculates the number of times a team chooses to start batting and fielding
+5. Calculates the number of times a team chooses to start batting and fielding
 ```{r}
 toss_choice("Delhi Daredevils")
 ```
 
-7. Calculate Rahul Sharma's bowler score
+6. Find the list of bowlers with bowling average above 40
 ```{r}
-bowler_score("Rahul Sharma")
+bowler_score(40)
 ```
 
-8. Calculate Rahul Sharma's overs
+7. Calculate Rahul Sharma's overs
 ```{r}
 overs("Rahul Sharma")
 ```
 
-9. Find a batsman's total number of sixes
+8. Find Rohit Sharma's total number of sixes
 ```{r}
 sixes("Rohit Sharma")
 ```
 
-10. Find a batsman's total number of fours
+9. Find Suresh Raina's total number of fours
 ```{r}
 fours("Suresh Raina")
 ```

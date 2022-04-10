@@ -1,5 +1,3 @@
-context("bowler_score")
-
 library(tibble)
 library(dplyr)
 library(testthat)
@@ -15,9 +13,11 @@ test_that("check for invalid input types", {
 
 test_that("check for when data not found", {
   expect_error(
-    bowler_score(-10), regexp = "greater than 0"
+    bowler_score(-10),
+    regexp = "greater than 0"
   )
   expect_error(
-    bowler_score(2000125), regexp = "input a lower number"
+    bowler_score(2000125),
+    regexp = "input a lower number"
   )
 })

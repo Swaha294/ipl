@@ -143,18 +143,33 @@ usethis::use_data(teams, overwrite = TRUE)
 batsman <- read_csv("data-raw/batsman.csv")
 batsman$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", batsman$PLAYER))
 batsman <- batsman %>%
-  clean_names()
+  clean_names() %>%
+  rename(
+    num_100 = x100,
+    num_50 = x50,
+    num_4s = x4s,
+    num_6s = x6s
+  )
 usethis::use_data(batsman, overwrite = TRUE)
 
 # ipl
 ipl <- read_csv("data-raw/ipl.csv") %>%
-  clean_names()
-
+  clean_names() %>%
+  mutate(
+    date = as.Date(date, "%Y-%m-%d"),
+    year = format(date, "%Y"),
+    id = as.character(id),
+    toss_decision = as.factor(toss_decision)
+  )
 usethis::use_data(ipl, overwrite = TRUE)
 
 ## Clean the Bowlers data
 bowlers <- read_csv("data-raw/bowlers.csv")
 bowlers$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", bowlers$PLAYER))
 bowlers <- bowlers %>%
-  clean_names()
+  clean_names() %>%
+  rename(
+    num_4w = x4w,
+    num_5w = x5w
+  )
 usethis::use_data(bowlers, overwrite = TRUE)
