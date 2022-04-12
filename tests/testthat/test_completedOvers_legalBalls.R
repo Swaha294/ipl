@@ -4,8 +4,8 @@ library(testthat)
 
 df1 <- data.frame(
   "Player" = "Rahul Sharma",
-  Completed_Overs = 2016,
-  Legal_Balls = 973,
+  Completed_Overs = 154,
+  Legal_Balls = 4,
 )
 
 test_that("check completed overs and legal balls", {
