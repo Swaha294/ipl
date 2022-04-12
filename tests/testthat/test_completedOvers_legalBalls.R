@@ -2,9 +2,14 @@ library(tibble)
 library(dplyr)
 library(testthat)
 
+df1 <- data.frame(
+  "Player" = "Rahul Sharma",
+  Completed_Overs = 2016,
+  Legal_Balls = 973,
+)
+
 test_that("check completed overs and legal balls", {
-  expect_equal("Completed overs: 154  Legal balls: 4", completedOvers_legalBalls("Rahul Sharma"))
-  expect_equal("Completed overs: 163  Legal balls: 3", completedOvers_legalBalls("Siddarth Kaul"))
+  expect_equal(df1, completedOvers_legalBalls("Rahul Sharma"))
 })
 
 test_that("check for invalid input types", {
