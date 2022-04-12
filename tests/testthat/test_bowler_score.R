@@ -8,7 +8,7 @@ test_that("check bowler score", {
 })
 
 test_that("check for invalid input types", {
-  expect_error(bowler_score("Rahul Sharma"), regexp = "be a numeric")
+  expect_error(bowler_score("Rahul Sharma"), regexp = "must be a numeric vector")
 })
 
 test_that("check for when data not found", {
