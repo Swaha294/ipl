@@ -17,16 +17,14 @@
 #' @export
 #'
 completedOvers_legalBalls <- function(player_name) {
-  if (!is.character(player_name)) {
-    stop(paste0("Invalid input: ", player_name, " must be a character"))
-  }
-
   if (player_name %in% bowlers$PLAYER) {
     overs = bowlers$Ov[bowlers$PLAYER == player_name]
     overs = as.character(overs)
     split_overs = unlist(strsplit(overs, "\\."))
-    combined_output = paste("Completed overs:", split_overs[1], " Legal balls:", split_overs[2])
-    return(combined_output)
+    Completed_Overs <- split_overs[1]
+    Legal_Balls <- split_overs[2]
+    output_df <- data.frame(Completed_Overs, Legal_Balls)
+    return(output_df)
   }
   else{
     stop("Invalid player name, please input another name")
