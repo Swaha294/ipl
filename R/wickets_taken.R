@@ -17,6 +17,9 @@
 #'
 
 wickets_taken <- function(player_name) {
+  if (!is.character(player_name)) {
+    stop(paste0("Invalid input: ", player_name, " must be a numeric character"))
+  }
   if (player_name %in% bowlers$PLAYER) {
     num_wickets = bowlers$Wkts[bowlers$PLAYER == player_name]
     return(num_wickets)
