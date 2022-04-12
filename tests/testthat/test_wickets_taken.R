@@ -8,7 +8,7 @@ test_that("check wickets taken", {
 })
 
 test_that("check for invalid input types", {
-  expect_error(wickets_taken(35), regexp = "be a character")
+  expect_error(wickets_taken(35), regexp = "must be a character")
 })
 
 test_that("check for when data not found", {
