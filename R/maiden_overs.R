@@ -3,13 +3,14 @@
 #' @param player_name The bowler whose maiden overs has to be calculated, as a
 #' character vector
 #'
-#' @return `maidenOvers` returns the maiden overs
+#' @return `maiden_overs` returns the maiden overs bowled by the given bowler
+#' across all IPL matches from 2008-2020
 #'
 #' @examples
 #'
 #' library(ipl)
 #'
-#' # Calculates the maiden overs for Rahul Sharma
+#' # Calculates the maiden overs bowled by Rahul Sharma
 #' maiden_overs("Rahul Sharma")
 #' @importFrom magrittr "%>%"
 #' @import dplyr

@@ -93,5 +93,25 @@ sixes("Rohit Sharma")
 fours("Suresh Raina")
 ```
 
+10. Calculate the number of runs conceded by a given bowler across all IPL 
+matches from 2008-2020
+```{r}
+runs("Rahul Sharma")
+```
+
+11. Calculate the number of wickets taken by a given bowler across all IPL 
+matches from 2008-2020
+```{r}
+wickets_taken("Rahul Sharma")
+```
+
+
+
+
+
+
+
+
+
 
 
