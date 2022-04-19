@@ -16,6 +16,10 @@
 #' @export
 #'
 overs <- function(player_name) {
+  if (!is.character(player_name)) {
+    stop(paste0("Invalid input: ", player_name, " must be a character"))
+  }
+
   if (player_name %in% bowlers$player) {
     return(bowlers$ov[bowlers$player == player_name])
   } else {

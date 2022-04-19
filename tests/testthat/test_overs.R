@@ -8,8 +8,8 @@ test_that("check overs", {
 })
 
 test_that("check for invalid input types", {
-  expect_error(overs(400), regexp = "Invalid player name, please input another name")
-  expect_error(overs(41), regexp = "Invalid player name, please input another name")
+  expect_error(overs(400), regexp = "must be a character")
+  expect_error(overs(41), regexp = "must be a character")
 })
 
 test_that("check for when data not found", {

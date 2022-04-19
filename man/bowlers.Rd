@@ -18,8 +18,13 @@ A data frame of 100 rows for all the bowlers
 \item{avg}{The average bowling score for the player}
 \item{econ}{bowler economy}
 \item{sr}{The strike rate of the bowler}
+<<<<<<< HEAD
+\item{x4w}{The number of innings in which the bowler took exactly four wickets}
+\item{x5w}{the number of innings in which the bowler took exactly five wickets}
+=======
 \item{num_4w}{The number of innings in which the bowler took exactly four wickets}
 \item{num_5w}{the number of innings in which the bowler took exactly five wickets}
+>>>>>>> 8ffb968760ba7762fa7113f41af7e1e6fcaea607
 }
 }
 \source{
