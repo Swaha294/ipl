@@ -111,6 +111,11 @@ by Rahul across all IPL matches from 2008-2020
 overs_balls("Rahul Sharma")
 ```
 
+13. Visualis=ze the number of runs made by Mumbai Indians in their match against
+Delhi Capitals on 2019-03-24, by partnerships
+```{r}
+partnership_runs(1175358, "Mumbai Indians")
+```
 
 
 

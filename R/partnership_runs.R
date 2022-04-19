@@ -16,14 +16,16 @@
 #' library(ipl)
 #'
 #' # Calculate the number of runs made by Mumbai Indians in their match against
-#' Delhi Capitals on 2019-03-24
-#' partnership_runs_plot(1175358, "Mumbai Indians")
+#' Delhi Capitals on 2019-03-24, by partnerships
+#' partnership_runs(1175358, "Mumbai Indians")
 #'
 #' @importFrom magrittr "%>%"
 #' @import dplyr
 #'
 #'
 #'
+options(dplyr.summarise.inform = FALSE)
+
 batsmen <- function(match_id, batting_side) {
 deliveries %>%
   filter(
