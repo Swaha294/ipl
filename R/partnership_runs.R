@@ -22,8 +22,24 @@
 #' @importFrom magrittr "%>%"
 #' @import dplyr
 #'
+#' @export
 #'
-#'
+partnership_runs <- function(match_id, batting_side) {
+
+  if (!is.numeric(match_id)) {
+    stop("Invalid input: match id should be a numeric vector", call. = FALSE)
+  } else if (!is.character(batting_side)) {
+    stop("Invalid input: batting side input should be a character vector", call. = FALSE)
+  } else if (!(match_id %in% deliveries$id)) {
+    stop(paste0(`match_id`, " not found!"), call. = FALSE)
+  } else if (!(batting_side %in% deliveries$batting_team)) {
+    stop(paste0(`batting_side`, " not found!"), call. = FALSE)
+  } else if (!(batting_side %in% deliveries$batting_team[deliveries$id == match_id])) {
+    stop("Wrong team for given match", call. = FALSE)
+  } else {
+    partnership_runs_plot(match_id, batting_side)
+  }
+}
 options(dplyr.summarise.inform = FALSE)
 
 batsmen <- function(match_id, batting_side) {
@@ -124,21 +140,3 @@ partnership_runs_plot <- function(match_id, batting_side) {
 
 }
 
-#' @export
-#'
-partnership_runs <- function(match_id, batting_side) {
-
-  if (!is.numeric(match_id)) {
-    stop("Invalid input: match id should be a numeric vector", call. = FALSE)
-  } else if (!is.character(batting_side)) {
-    stop("Invalid input: batting side input should be a character vector", call. = FALSE)
-  } else if (!(match_id %in% deliveries$id)) {
-    stop(paste0(`match_id`, " not found!"), call. = FALSE)
-  } else if (!(batting_side %in% deliveries$batting_team)) {
-    stop(paste0(`batting_side`, " not found!"), call. = FALSE)
-  } else if (!(batting_side %in% deliveries$batting_team[deliveries$id == match_id])) {
-    stop("Wrong team for given match", call. = FALSE)
-  } else {
-    partnership_runs_plot(match_id, batting_side)
-  }
-}
