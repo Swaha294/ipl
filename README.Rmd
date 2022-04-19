@@ -105,6 +105,11 @@ matches from 2008-2020
 wickets_taken("Rahul Sharma")
 ```
 
+12. Calculate the number of complete overs and the remaining (legal) balls bowled 
+by Rahul across all IPL matches from 2008-2020
+```{r}
+overs_balls("Rahul Sharma")
+```
 
 
 
