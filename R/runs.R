@@ -18,9 +18,9 @@
 runs <- function(player_name) {
   if (!is.character(player_name)) {
     stop(paste0("Invalid input: ", player_name, " must be a character"))
-  } else if (!(player_name %in% bowlers$player)) {
+  } else if (!(player_name %in% bowlers_100$player)) {
     stop("Invalid player name, please input another name")
   } else {
-    return(bowlers$runs[bowlers$player == player_name])
+    return(bowlers_100$runs[bowlers_100$player == player_name])
   }
 }

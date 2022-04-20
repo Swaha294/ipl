@@ -20,8 +20,8 @@ overs <- function(player_name) {
     stop(paste0("Invalid input: ", player_name, " must be a character"))
   }
 
-  if (player_name %in% bowlers$player) {
-    return(bowlers$ov[bowlers$player == player_name])
+  if (player_name %in% bowlers_100$player) {
+    return(bowlers_100$ov[bowlers_100$player == player_name])
   } else {
     stop("Invalid player name, please input another name")
   }

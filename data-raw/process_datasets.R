@@ -140,9 +140,9 @@ teams <- teams %>%
 usethis::use_data(teams, overwrite = TRUE)
 
 # Clean batsman dataset
-batsman <- read_csv("data-raw/batsman.csv")
-batsman$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", batsman$PLAYER))
-batsman <- batsman %>%
+batsman_100 <- read_csv("data-raw/batsman.csv")
+batsman_100$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", batsman_100$PLAYER))
+batsman_100 <- batsman_100 %>%
   clean_names() %>%
   rename(
     num_100 = x100,
@@ -150,7 +150,7 @@ batsman <- batsman %>%
     num_4s = x4s,
     num_6s = x6s
   )
-usethis::use_data(batsman, overwrite = TRUE)
+usethis::use_data(batsman_100, overwrite = TRUE)
 
 # ipl
 ipl <- read_csv("data-raw/ipl.csv") %>%
@@ -164,12 +164,12 @@ ipl <- read_csv("data-raw/ipl.csv") %>%
 usethis::use_data(ipl, overwrite = TRUE)
 
 ## Clean the Bowlers data
-bowlers <- read_csv("data-raw/bowlers.csv")
-bowlers$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", bowlers$PLAYER))
-bowlers <- bowlers %>%
+bowlers_100 <- read_csv("data-raw/bowlers.csv")
+bowlers_100$PLAYER <- trimws(gsub("[^[:alnum:]]", " ", bowlers_100$PLAYER))
+bowlers_100 <- bowlers_100 %>%
   clean_names() %>%
   rename(
     num_4w = x4w,
     num_5w = x5w
   )
-usethis::use_data(bowlers, overwrite = TRUE)
+usethis::use_data(bowlers_100, overwrite = TRUE)

@@ -88,9 +88,9 @@ overs("Rahul Sharma")
 sixes("Rohit Sharma")
 ```
 
-9. Find Suresh Raina's total number of fours
+9. Find Suresh Raina's total number of fours in the 2012 IPL season
 ```{r}
-fours("Suresh Raina")
+fours("SK Raina", 2012)
 ```
 
 10. Calculate the number of runs conceded by a given bowler across all IPL 
@@ -111,12 +111,17 @@ by Rahul across all IPL matches from 2008-2020
 overs_balls("Rahul Sharma")
 ```
 
-13. Visualis=ze the number of runs made by Mumbai Indians in their match against
+13. Visualize the number of runs made by Mumbai Indians in their match against
 Delhi Capitals on 2019-03-24, by partnerships
 ```{r}
 partnership_runs(1175358, "Mumbai Indians")
 ```
 
+14. Get the summary table of all batting statistics for MS Dhoni for all IPL matches
+he played between 2008 and 2020
+```{r}
+batsman_summary("MS Dhoni")
+```
 
 
 

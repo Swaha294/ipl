@@ -42,7 +42,7 @@ strike_rate <- function(player, yr) {
         batsman == player,
         year == yr
       ) %>%
-      group_by(batsman) %>%
+      group_by(year, batsman) %>%
       summarise(
         strike_rate = round(100 * sum(batsman_runs) / balls_faced(player, yr), 2)
       )

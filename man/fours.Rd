@@ -4,7 +4,7 @@
 \alias{fours}
 \title{Find a batsman's total number of fours}
 \usage{
-fours(player_name)
+fours(player_name, yr)
 }
 \arguments{
 \item{player_name}{a batsman for whom we want to calculate the number of fours they scored}
@@ -17,6 +17,6 @@ Find a batsman's total number of fours
 }
 \examples{
 library(ipl)
-# Find the total number of fours scored by Suresh Raina
-fours("Suresh Raina")
+# Find the total number of fours scored by Suresh Raina in the 2014 IPL season
+fours("SK Raina", 2014)
 }

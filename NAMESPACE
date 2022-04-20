@@ -2,6 +2,7 @@
 
 export(bat_avg)
 export(bat_max)
+export(batsman_summary)
 export(bowler_score)
 export(cents_halfcents)
 export(fours)

@@ -21,10 +21,10 @@
 overs_balls <- function(player_name) {
   if (!(is.character(player_name))) {
     stop(paste("Invalid input: ", player_name, " should be a character vector"), call. = FALSE)
-  } else if (!(player_name %in% bowlers$player)) {
+  } else if (!(player_name %in% bowlers_100$player)) {
     stop("Invalid player name, please input another name", call. = FALSE)
   } else {
-    overs <- bowlers$ov[bowlers$player == player_name]
+    overs <- bowlers_100$ov[bowlers_100$player == player_name]
     overs <- as.character(overs)
     split_overs <- unlist(strsplit(overs, "\\."))
     player <- player_name

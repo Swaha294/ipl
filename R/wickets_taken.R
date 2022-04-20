@@ -20,10 +20,10 @@
 wickets_taken <- function(player_name) {
   if (!is.character(player_name)) {
     stop(paste0("Invalid input: ", player_name, " must be a character"))
-  } else if (!(player_name %in% bowlers$player)) {
+  } else if (!(player_name %in% bowlers_100$player)) {
     stop("Invalid player name, please input another name")
   } else {
-    num_wickets <- bowlers$wkts[bowlers$player == player_name]
+    num_wickets <- bowlers_100$wkts[bowlers_100$player == player_name]
     return(num_wickets)
   }
 }

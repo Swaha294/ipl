@@ -26,7 +26,7 @@ bowler_score <- function(given_score) {
       stop("Invalid score. Must be greater than 0.")
     } else if (given_score >= 0 & given_score <= max(bowlers$avg)) {
       # Retrieves all the bowlers with an avg score greater than given_score
-      bowlers_list <- bowlers$player[bowlers$avg > given_score]
+      bowlers_list <- bowlers_100$player[bowlers$avg > given_score]
       return(bowlers_list)
     } else if (given_score > max(bowlers$avg)) {
       stop("Invalid score. Please input a lower number.")
