@@ -20,7 +20,7 @@
 #'
 overs_balls <- function(player_name) {
   if (!(is.character(player_name))) {
-    stop(paste("Invalid input: ", player_name, " should be a character vector"), call. = FALSE)
+    stop(paste0("Invalid input: ", player_name, " should be a character vector"), call. = FALSE)
   } else if (!(player_name %in% bowlers_100$player)) {
     stop("Invalid player name, please input another name", call. = FALSE)
   } else {
@@ -28,8 +28,8 @@ overs_balls <- function(player_name) {
     overs <- as.character(overs)
     split_overs <- unlist(strsplit(overs, "\\."))
     player <- player_name
-    completed_overs <- split_overs[1]
-    balls <- split_overs[2]
+    completed_overs <- as.numeric(split_overs[1])
+    balls <- as.numeric(split_overs[2])
     output_df <- data.frame(player, completed_overs, balls)
     return(output_df)
   }

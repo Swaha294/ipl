@@ -13,7 +13,7 @@ test_that("check completed overs and legal balls", {
 })
 
 test_that("check for invalid input types", {
-  expect_error(overs_balls(400), regexp = "must be a character")
+  expect_error(overs_balls(400), regexp = "be a character")
 })
 
 test_that("check for when data not found", {
