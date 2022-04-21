@@ -7,7 +7,11 @@
 fours(player_name, yr)
 }
 \arguments{
-\item{player_name}{a batsman for whom we want to calculate the number of fours they scored}
+\item{player_name}{A batsman for whom we want to calculate the number of fours
+they scored}
+
+\item{yr}{The year for which the number of fours for the given batsman is to be
+calculated}
 }
 \value{
 \code{sixes} return number of fours for the given player as a value

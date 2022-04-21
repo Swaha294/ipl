@@ -1,6 +1,9 @@
 #' Find a batsman's total number of sixes
 #'
-#' @param player_name a batsman for whom we want to calculate the number of sixes they scored
+#' @param player_name A batsman for whom we want to calculate the number of sixes
+#' they scored
+#' @param yr The year for which the number of sixes for the given batsman is to be
+#' calculated
 #'
 #' @return `sixes` return number of sixes for the given player as a value
 #'

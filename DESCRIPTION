@@ -21,6 +21,8 @@ Imports:
     dplyr,
     tibble,
     janitor,
+    ggplot2,
+    purrr,
     broom (>= 0.4.3),
     formula.tools,
     knitr,

@@ -42,6 +42,7 @@ bat_max <- function(player, yr) {
       summarise(match_runs = sum(batsman_runs)) %>%
       ungroup() %>%
       group_by(year, batsman) %>%
-      summarise(max_runs = max(match_runs))
+      summarise(max_runs = max(match_runs)) %>%
+      ungroup()
   }
 }

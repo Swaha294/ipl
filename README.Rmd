@@ -83,9 +83,9 @@ bowler_score(40)
 overs("Rahul Sharma")
 ```
 
-8. Find Rohit Sharma's total number of sixes
+8. Find Rohit Sharma's total number of sixes in the 2016 IPL season
 ```{r}
-sixes("Rohit Sharma")
+sixes("RG Sharma", 2016)
 ```
 
 9. Find Suresh Raina's total number of fours in the 2012 IPL season

@@ -49,6 +49,7 @@ cents_halfcents <- function(player, yr) {
       summarise(
         centuries = sum(cents),
         half_centuries = sum(half_cents)
-      )
+      ) %>%
+      ungroup()
   }
 }

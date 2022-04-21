@@ -15,6 +15,8 @@
 #' batsman_summary("MS Dhoni")
 #' @importFrom magrittr "%>%"
 #' @import dplyr
+#' @import ggplot2
+#' @importFrom purrr map2_df
 #'
 #' @export
 #'
