@@ -29,37 +29,3 @@ ipl_sticker <- sticker(
 
 
 save_sticker(here::here("data-raw/sticker", "hex_ipl.png"), ipl_sticker)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
