@@ -20,7 +20,6 @@ ipl_sticker <- sticker(
   s_width = 1.2,
   package = "ipl",
   p_color = "#191970",
-  #p_color = "#252525",
   h_fill = "#FFFFFF",
   h_color = "#191970",
   h_size = 1.5,
@@ -29,7 +28,7 @@ ipl_sticker <- sticker(
 )
 
 
-save_sticker(here::here("data-raw", "hex_ipl.png"), ipl_sticker)
+save_sticker(here::here("data-raw/sticker", "hex_ipl.png"), ipl_sticker)
 
 
 
