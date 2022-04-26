@@ -24,11 +24,11 @@ bowler_score <- function(given_score) {
       stop(paste0("Invalid input: ", given_score, " must be a numeric vector"))
     } else if (given_score < 0) {
       stop("Invalid score. Must be greater than 0.")
-    } else if (given_score >= 0 & given_score <= max(bowlers$avg)) {
+    } else if (given_score >= 0 & given_score <= max(bowlers_100$avg)) {
       # Retrieves all the bowlers with an avg score greater than given_score
-      bowlers_list <- bowlers$player[bowlers$avg > given_score]
+      bowlers_list <- bowlers_100$player[bowlers_100$avg > given_score]
       return(bowlers_list)
-    } else if (given_score > max(bowlers$avg)) {
+    } else if (given_score > max(bowlers_100$avg)) {
       stop("Invalid score. Please input a lower number.")
     }
 }

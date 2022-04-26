@@ -4,6 +4,7 @@ library(testthat)
 
 
 df <- tibble(
+  year = 2016,
   batsman = "V Kohli",
   centuries = 4,
   half_centuries = 7

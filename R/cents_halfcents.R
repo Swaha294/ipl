@@ -37,7 +37,7 @@ cents_halfcents <- function(player, yr) {
         batsman %in% player,
         year %in% yr
       ) %>%
-      group_by(id, batsman) %>%
+      group_by(id, year, batsman) %>%
       distinct() %>%
       summarise(
         player_runs = sum(batsman_runs),
@@ -45,10 +45,11 @@ cents_halfcents <- function(player, yr) {
         half_cents = (player_runs - (cents * 100)) %/% 50
       ) %>%
       ungroup() %>%
-      group_by(batsman) %>%
+      group_by(year, batsman) %>%
       summarise(
         centuries = sum(cents),
         half_centuries = sum(half_cents)
-      )
+      ) %>%
+      ungroup()
   }
 }

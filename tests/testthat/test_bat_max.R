@@ -4,6 +4,7 @@ library(testthat)
 
 
 df <- tibble(
+  year = 2019,
   "batsman" = "MS Dhoni",
   max_runs = 84
 )

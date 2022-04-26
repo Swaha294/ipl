@@ -16,27 +16,26 @@
 #'
 #' @export
 #'
-bowling_analysis <- function(player_name) {
-  overs = overs(player_name)
+maiden_overs <- function(player_name) {
 
-  #maiden overs naming
-  firstname_letter = substr(word(player_name, 1), 1, 1)
-  surname = word(player_name, 2)
-  player_name_MO = paste(firstname_letter, surname)
-  maiden_overs = maiden_overs(player_name_MO)
+  maiden_overs_df <- ball_by_ball %>%
+    dplyr::select(id, ball, batsman, bowler, batsman_runs) %>%
+    filter(batsman_runs == 0, bowler == player_name)
 
-  runs = runs(player_name)
-  wickets_taken = wickets_taken(player_name)
-  bowlingAnalysis = paste(overs, "-", maiden_overs, "-",runs, "-", wickets_taken)
+  ballcount = 1
+  maiden_over = 0
 
-  Player <- player_name
-  Overs <- overs
-  Maiden_Overs <- maiden_overs
-  Runs <- runs
-  Wickets_Taken <- wickets_taken
-  Bowling_Analysis <- bowlingAnalysis
+  for (ballnum in maiden_overs_df$ball) {
+    if (ballcount == ballnum) {
+      ballcount = ballcount+1
 
-  output_df <- data.frame(Player, Overs, Maiden_Overs, Runs, Wickets_Taken, Bowling_Analysis)
-  return(output_df)
+      if (ballcount == 6) {
+        maiden_over = maiden_over+1
+      }
+    }
+    else {
+      ballcount = 1
+    }
+  }
+  return(maiden_over)
 }
-

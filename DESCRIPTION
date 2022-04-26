@@ -14,6 +14,7 @@ Description:
     and the number of centuriesand half-centuries made by a batsman in a given IPL season.
 License: MIT + file LICENSE
 Suggests: 
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports:
@@ -21,6 +22,8 @@ Imports:
     dplyr,
     tibble,
     janitor,
+    ggplot2,
+    purrr,
     broom (>= 0.4.3),
     formula.tools,
     knitr,
@@ -31,4 +34,4 @@ RoxygenNote: 7.1.2
 Depends: 
     R (>= 2.10)
 LazyData: true
-
+VignetteBuilder: knitr

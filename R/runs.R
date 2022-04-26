@@ -2,7 +2,7 @@
 #'
 #' @param player_name The bowler whose runs has to be calculated, as a character vector
 #'
-#' @return `runs` returns the number of runs
+#' @return `runs` returns the number of runs conceded by the given bowler
 #'
 #' @examples
 #'
@@ -18,12 +18,9 @@
 runs <- function(player_name) {
   if (!is.character(player_name)) {
     stop(paste0("Invalid input: ", player_name, " must be a character"))
-  }
-
-  if (player_name %in% bowlers$PLAYER) {
-    return(bowlers$Runs[bowlers$PLAYER == player_name])
-  }
-  else {
+  } else if (!(player_name %in% bowlers_100$player)) {
     stop("Invalid player name, please input another name")
+  } else {
+    return(bowlers_100$runs[bowlers_100$player == player_name])
   }
 }

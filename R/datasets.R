@@ -96,7 +96,7 @@
 #' \item{num_6s}{Number of 6s scored by the batsman}
 #' }
 #' @source This dataset was obtained from Kaggle: [Top_100_Batsman](https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset?select=Top_100_bowlers.xlsx).
-"batsman"
+"batsman_100"
 
 
 #' This file contains all the details of the top 100 bowlers
@@ -118,4 +118,4 @@
 #' \item{num_5w}{the number of innings in which the bowler took exactly five wickets}
 #' }
 #' @source This dataset was obtained from Kaggle: [Bowlers](https://www.kaggle.com/datasets/nkitgupta/ipl-auction-and-ipl-dataset).
-"bowlers"
+"bowlers_100"

@@ -4,10 +4,14 @@
 \alias{sixes}
 \title{Find a batsman's total number of sixes}
 \usage{
-sixes(player_name)
+sixes(player_name, yr)
 }
 \arguments{
-\item{player_name}{a batsman for whom we want to calculate the number of sixes they scored}
+\item{player_name}{A batsman for whom we want to calculate the number of sixes
+they scored}
+
+\item{yr}{The year for which the number of sixes for the given batsman is to be
+calculated}
 }
 \value{
 \code{sixes} return number of sixes for the given player as a value
@@ -18,6 +22,6 @@ Find a batsman's total number of sixes
 \examples{
 library(ipl)
 
-# Find the total number of sixes scored by Rohit Sharma
-sixes("Rohit Sharma")
+# Find the total number of sixes scored by Rohit Sharma in the 2017 IPL season
+sixes("RG Sharma", 2017)
 }

@@ -1,0 +1,59 @@
+---
+title: "ipl_vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ipl_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ipl)
+library(dplyr)
+library(ggplot2)
+```
+
+
+The `ipl` package aims at supplying data and functions for analysis of data on the Indian Premier League (IPL). It includes datasets on individual balls played in IPL games between 2008 and 2020, on the games themselves, and on the top 100 IPL batsmen and the top 100 IPL bowlers across time. Furthermore, the package includes simple functions on analysis of individual batsmen and bowlers, and for combined analysis of IPL matches. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

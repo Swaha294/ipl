@@ -13,11 +13,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-## ipl
+## ipl <img src="data-raw/sticker/hex_ipl.png" align="right" height=140/>
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/ipl)](https://CRAN.R-project.org/package=ipl)
+[![R-CMD-check](https://github.com/Swaha294/ipl2/workflows/R-CMD-check/badge.svg)](https://github.com/Swaha294/ipl2/actions)
 <!-- badges: end -->
 
 The goal of `ipl` is to provide data and functions related to IPL matches and standard cricket statistics. This package allows users to avail of IPL data and conduct analysis of cricketers
@@ -83,15 +84,50 @@ bowler_score(40)
 overs("Rahul Sharma")
 ```
 
-8. Find Rohit Sharma's total number of sixes
+8. Find Rohit Sharma's total number of sixes in the 2016 IPL season
 ```{r}
-sixes("Rohit Sharma")
+sixes("RG Sharma", 2016)
 ```
 
-9. Find Suresh Raina's total number of fours
+9. Find Suresh Raina's total number of fours in the 2012 IPL season
 ```{r}
-fours("Suresh Raina")
+fours("SK Raina", 2012)
 ```
+
+10. Calculate the number of runs conceded by a given bowler across all IPL 
+matches from 2008-2020
+```{r}
+runs("Rahul Sharma")
+```
+
+11. Calculate the number of wickets taken by a given bowler across all IPL 
+matches from 2008-2020
+```{r}
+wickets_taken("Rahul Sharma")
+```
+
+12. Calculate the number of complete overs and the remaining (legal) balls bowled 
+by Rahul across all IPL matches from 2008-2020
+```{r}
+overs_balls("Rahul Sharma")
+```
+
+13. Visualize the number of runs made by Mumbai Indians in their match against
+Delhi Capitals on 2019-03-24, by partnerships
+```{r}
+partnership_runs(1175358, "Mumbai Indians")
+```
+
+14. Get the summary table of all batting statistics for MS Dhoni for all IPL matches
+he played between 2008 and 2020
+```{r}
+batsman_summary("MS Dhoni")
+```
+
+
+
+
+
 
 
 

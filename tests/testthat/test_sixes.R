@@ -2,7 +2,7 @@ library(dplyr)
 library(testthat)
 
 test_that("check sixes", {
-  expect_length(sixes("Suresh Raina"), 1)
+  expect_length(sixes("RG Sharma", 2016), 3)
 })
 
 test_that("check for invalid input types", {
