@@ -9,6 +9,7 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/ipl)](https://CRAN.R-project.org/package=ipl)
+[![R-CMD-check](https://github.com/Swaha294/ipl2/workflows/R-CMD-check/badge.svg)](https://github.com/Swaha294/ipl2/actions)
 <!-- badges: end -->
 
 The goal of `ipl` is to provide data and functions related to IPL
@@ -30,15 +31,14 @@ You can install the development version of ipl like so:
 ``` r
 remotes::install_github("Swaha294/ipl")
 #> Downloading GitHub repo Swaha294/ipl@HEAD
-#> vctrs        (0.4.0  -> 0.4.1) [CRAN]
-#> RColorBrewer (1.1-2  -> 1.1-3) [CRAN]
-#> scales       (1.1.1  -> 1.2.0) [CRAN]
-#> broom        (0.7.12 -> 0.8.0) [CRAN]
-#> Installing 4 packages: vctrs, RColorBrewer, scales, broom
+#> cli (3.2.0 -> 3.3.0) [CRAN]
+#> Installing 1 packages: cli
 #> 
-#> The downloaded binary packages are in
-#>  /var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T//RtmpkGegVa/downloaded_packages
-#> * checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpkGegVa/remotes55ce766037f0/Swaha294-ipl-a8850bf/DESCRIPTION’ ... OK
+#>   There is a binary version available but the source version is later:
+#>     binary source needs_compilation
+#> cli  3.2.0  3.3.0              TRUE
+#> installing the source package 'cli'
+#> * checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpmSwQZT/remotes10e4844a3db80/Swaha294-ipl-d33b3d9/DESCRIPTION’ ... OK
 #> * preparing ‘ipl’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
