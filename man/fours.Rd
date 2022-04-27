@@ -14,7 +14,7 @@ they scored}
 calculated}
 }
 \value{
-\code{sixes} return number of fours for the given player as a value
+\code{fours} return number of fours for the given player as a value
 }
 \description{
 Find a batsman's total number of fours

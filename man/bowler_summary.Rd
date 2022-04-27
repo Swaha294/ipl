@@ -2,7 +2,7 @@
 % Please edit documentation in R/bowler_summary.R
 \name{bowler_summary}
 \alias{bowler_summary}
-\title{Get the summary table of the bowling statistics of a batsman
+\title{Get the summary table of the bowling statistics
 (across all IPL matches between 2008 and 2020)}
 \usage{
 bowler_summary()
@@ -11,13 +11,13 @@ bowler_summary()
 \code{bowler_summary} returns the a data frame with the bowling statistics
 }
 \description{
-Get the summary table of the bowling statistics of a batsman
+Get the summary table of the bowling statistics
 (across all IPL matches between 2008 and 2020)
 }
 \examples{
 
 library(ipl)
 
-# Get the summary table of the bowler statistics for Rahul Sharma
+# Get the summary table of the bowler statistics
 bowler_summary()
 }
