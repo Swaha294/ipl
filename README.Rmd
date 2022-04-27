@@ -124,6 +124,11 @@ he played between 2008 and 2020
 batsman_summary("MS Dhoni")
 ```
 
+15. Get the summary table of wins and losses for Sunrisers Hyderabad in 2017
+```{r}
+winloss("Sunrisers Hyderabad", 2017)
+```
+
 
 
 

@@ -1,10 +1,6 @@
 library(dplyr)
 library(testthat)
 
-test_that("check winloss", {
-  expect_length(winloss("Sunrisers Hyderabad", 2017), 4)
-})
-
 test_that("check for invalid input types", {
   expect_error(
     winloss(00, 2017),

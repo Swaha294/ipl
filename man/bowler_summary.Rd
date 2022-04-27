@@ -19,5 +19,5 @@ Get the summary table of the bowling statistics of a batsman
 library(ipl)
 
 # Get the summary table of the bowler statistics for Rahul Sharma
-bowler_summary()
+bowler_summary("Rahul Sharma")
 }
