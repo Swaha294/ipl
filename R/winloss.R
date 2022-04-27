@@ -11,7 +11,7 @@
 #' library(ipl)
 #'
 #' # Find the total number of wins and losses for Sunrisers Hyderabad in the 2017 IPL season
-#' winloss("Sunrisers Hyderabad", 2017)
+#' winloss("Delhi Daredevils", 2017)
 #' @importFrom magrittr "%>%"
 #' @import dplyr
 #' @export
