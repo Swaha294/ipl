@@ -17,6 +17,14 @@
 #'
 #' @export
 bowler_summary <- function() {
+  # most innings
+  value_mostInns = max(bowlers$Inns)
+  bowler_mosInns = bowlers$PLAYER[bowlers$Inns == value_mostInns]
+
+  # most matches
+  value_mostMat = max(bowlers$Mat)
+  bowler_mosMat = bowlers$PLAYER[bowlers$Mat == value_mostMat]
+
   # most overs
   value_mostOvers = max(bowlers$Ov)
   bowler_mostOvers = bowlers$PLAYER[bowlers$Ov == value_mostOvers]
@@ -30,9 +38,9 @@ bowler_summary <- function() {
   bowler_mostWkts = bowlers$PLAYER[bowlers$Wkts == value_mostWkts]
 
   # building each column
-  Statistic <- c("Most Overs", "Most Runs", "Most Wickets")
-  Bowler <- c(bowler_mostOvers, bowler_mostRuns, bowler_mostWkts)
-  Value <- c(value_mostOvers, value_mostRuns, value_mostWkts)
+  Statistic <- c("Most Overs", "Most Runs", "Most Wickets", "Most Matches", "Most Innings")
+  Bowler <- c(bowler_mostOvers, bowler_mostRuns, bowler_mostWkts, bowler_mosMat, bowler_mosInns)
+  Value <- c(value_mostOvers, value_mostRuns, value_mostWkts, value_mostMat, value_mostInns)
 
   # creating the df
   summary_df <- data.frame(Statistic, Bowler, Value)
