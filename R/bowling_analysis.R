@@ -17,6 +17,14 @@
 #'
 #' @export
 bowling_analysis <- function(player_name) {
+  if (!is.character(player_name)) {
+    stop(paste0("Invalid input: ", player_name, " must be a character"))
+  }
+
+  if (player_name %!in% bowlers_100$player) {
+    stop("Invalid player name, please input another name")
+  }
+
   overs = ipl::overs(player_name)
 
   #maiden overs naming
@@ -27,8 +35,6 @@ bowling_analysis <- function(player_name) {
 
   runs <- ipl::runs(player_name)
   wickets_taken <- ipl::wickets_taken(player_name)
-  # bowling_analysis <- paste0(overs, "-", maiden_overs, "-",runs, "-", wickets_taken)
-
   bowler <- player_name
 
   output_df <- data.frame(bowler, overs, maiden_overs, runs, wickets_taken)
