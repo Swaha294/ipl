@@ -10,13 +10,21 @@
 #' library(ipl)
 #'
 #' # Calculates the maiden overs for Rahul Sharma
-#' maiden_overs("Rahul Sharma")
+#' maiden_overs("R Sharma")
 #' @importFrom magrittr "%>%"
 #' @import dplyr
 #'
 #' @export
 #'
 maiden_overs <- function(player_name) {
+
+  if (!is.character(player_name)) {
+    stop(paste0("Invalid input: ", player_name, " must be a character"))
+  }
+
+  if (!(player_name %in% bowlers_100$player)) {
+    stop("Invalid player name, please input another name.")
+  }
 
   maiden_overs_df <- deliveries %>%
     select(id, ball, batsman, bowler, batsman_runs) %>%

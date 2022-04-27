@@ -19,12 +19,12 @@
 bowler_summary <- function() {
 
   # most innings
-  value_mostInns = max(bowlers$Inns)
-  bowler_mosInns = bowlers$PLAYER[bowlers$Inns == value_mostInns]
+  value_mostInns = max(bowlers_100$inns)
+  bowler_mosInns = bowlers_100$player[bowlers_100$inns == value_mostInns]
 
   # most matches
-  value_mostMat = max(bowlers$Mat)
-  bowler_mosMat = bowlers$PLAYER[bowlers$Mat == value_mostMat]
+  value_mostMat = max(bowlers_100$mat)
+  bowler_mosMat = bowlers_100$player[bowlers_100$mat == value_mostMat]
 
   # most overs
   value_mostOvers = max(bowlers_100$ov)

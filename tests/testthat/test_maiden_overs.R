@@ -13,12 +13,6 @@ test_that("check for invalid input types", {
 })
 
 test_that("check for when data not found", {
-  expect_error(
-    maiden_overs("Sharma"),
-    regexp = "input another name"
-  )
-  expect_error(
-    maiden_overs("Rahul"),
-    regexp = "input another name"
-  )
+  expect_error(maiden_overs("Sharma"), regexp = "input another name")
+  expect_error(maiden_overs("Rahul"), regexp = "input another name")
 })

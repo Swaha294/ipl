@@ -21,7 +21,7 @@ bowling_analysis <- function(player_name) {
     stop(paste0("Invalid input: ", player_name, " must be a character"))
   }
 
-  if (player_name %!in% bowlers_100$player) {
+  if (!(player_name %in% bowlers_100$player)) {
     stop("Invalid player name, please input another name")
   }
 
