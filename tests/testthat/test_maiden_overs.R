@@ -8,7 +8,6 @@ test_that("calculate maiden overs", {
 })
 
 test_that("check for invalid input types", {
-  expect_error(maiden_overs(400), regexp = "must be a character")
   expect_error(maiden_overs(41), regexp = "must be a character")
 })
 

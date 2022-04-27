@@ -23,7 +23,7 @@ maiden_overs <- function(player_name) {
   }
 
   if (!(player_name %in% bowlers_100$player)) {
-    stop("Invalid player name, please input another name.")
+    stop("Invalid player name, please input another name. Make sure the player `Rahul Sharma ` is denoted as `R Sharma`.")
   }
 
   maiden_overs_df <- deliveries %>%

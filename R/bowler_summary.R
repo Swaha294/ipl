@@ -1,4 +1,4 @@
-#' Get the summary table of the bowling statistics of a batsman
+#' Get the summary table of the bowling statistics
 #' (across all IPL matches between 2008 and 2020)
 #'
 #'
@@ -8,7 +8,7 @@
 #'
 #' library(ipl)
 #'
-#' # Get the summary table of the bowler statistics for Rahul Sharma
+#' # Get the summary table of the bowler statistics
 #' bowler_summary()
 #' @importFrom magrittr "%>%"
 #' @import dplyr
