@@ -32,7 +32,7 @@ batsman_summary <- function(player) {
       left_join(map2_df(player, 2008:2020, ipl::strike_rate), by = c("batsman", "year")) %>%
       left_join(map2_df(player, 2008:2020, ipl::cents_halfcents), by = c("batsman", "year")) %>%
       left_join(map2_df(player, 2008:2020, ipl::fours), by = c("batsman", "year")) %>%
-      left_join(map2_df(player, 2008:2020, ipl::sixes)) %>%
+      left_join(map2_df(player, 2008:2020, ipl::sixes), by = c("batsman", "year")) %>%
       select(-batsman) %>%
       arrange(desc(year))
   }

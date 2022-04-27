@@ -4,7 +4,7 @@ library(testthat)
 
 
 df <- data.frame(
-  "statistic" = c("most_overs", "most_runs", "most_wickets", "most_matches", "most_innings"),
+  "statistic" = c("Most Overs", "Most Runs", "Most Wickets", "Most Matches", "Most Innings"),
   "bowler" = c("Harbhajan Singh", "Piyush Chawla", "Lasith Malinga", "Suresh Raina", "Harbhajan Singh"),
   "value" = c(562.2, 4072.0, 170.0, 193.0, 157.0)
 )

@@ -11,7 +11,7 @@ maiden_overs(player_name)
 character vector}
 }
 \value{
-\code{maidenOvers} returns the maiden overs
+\code{maiden_overs} returns the maiden overs
 }
 \description{
 Returns the maiden overs for the given bowler
@@ -21,5 +21,5 @@ Returns the maiden overs for the given bowler
 library(ipl)
 
 # Calculates the maiden overs for Rahul Sharma
-maiden_overs("R Sharma")
+maiden_overs("Harbhajan Singh")
 }
