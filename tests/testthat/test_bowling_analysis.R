@@ -4,7 +4,6 @@ library(testthat)
 df <- data.frame(
   "bowler" = "Rahul Sharma",
   "overs" = 154.4,
-  "maiden_overs" = 2,
   "runs" = 1086,
   "wickets_taken" = 40
 )

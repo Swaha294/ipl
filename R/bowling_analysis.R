@@ -29,14 +29,12 @@ bowling_analysis <- function(player_name) {
   #maiden overs naming
   firstname_letter <- substr(word(player_name, 1), 1, 1)
   surname <- word(player_name, 2)
-  player_name_MO <- paste(firstname_letter, surname)
 
   overs <- ipl::overs(player_name)
-  maiden_overs <- ipl::maiden_overs(player_name)
   runs <- ipl::runs(player_name)
   wickets_taken <- ipl::wickets_taken(player_name)
   bowler <- player_name
 
-  output_df <- data.frame(bowler, overs, maiden_overs, runs, wickets_taken)
+  output_df <- data.frame(bowler, overs, runs, wickets_taken)
   return(output_df)
 }
