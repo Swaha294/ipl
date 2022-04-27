@@ -1,7 +1,7 @@
 library(dplyr)
 library(testthat)
 
-df <- tibble(
+df <- data.frame(
   "bowler" = "Rahul Sharma",
   "overs" = 154.4,
   "maiden_overs" = 2,
@@ -14,12 +14,6 @@ test_that("check bowling analysis", {
 })
 
 test_that("check for when data not found", {
-  expect_error(
-    bowling_analysis("Sharma"),
-    regexp = "input another name"
-  )
-  expect_error(
-    bowling_analysis("Rahul"),
-    regexp = "input another name"
-  )
+  expect_error(bowling_analysis("Sharma"),regexp = "input another name")
+  expect_error(bowling_analysis("Rahul"),regexp = "input another name")
 })
