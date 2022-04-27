@@ -23,5 +23,5 @@ Get a summary table of a team's wins and losses for a given year
 library(ipl)
 
 # Find the total number of wins and losses for Sunrisers Hyderabad in the 2017 IPL season
-winloss("Sunrisers Hyderabad", 2017)
+winloss("Delhi Daredevils", 2017)
 }

@@ -11,7 +11,7 @@ bowling_analysis(player_name)
 character vector}
 }
 \value{
-\code{bowling_analysis} returns the summary analysis of a bowler in a dataframe
+\code{bowling_analysis} returns the summary analysis of a bowler in a data frame
 }
 \description{
 Returns the summary analysis for the given bowler
