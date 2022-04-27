@@ -1,4 +1,4 @@
-#' Returns the summary analysis maiden overs for the given bowler
+#' Returns the summary analysis for the given bowler
 #'
 #' @param player_name The bowler whose summary analysis has to be calculated, as a
 #' character vector
@@ -16,6 +16,7 @@
 #' @importFrom stringr word
 #'
 #' @export
+#'
 bowling_analysis <- function(player_name) {
   if (!is.character(player_name)) {
     stop(paste0("Invalid input: ", player_name, " must be a character"))

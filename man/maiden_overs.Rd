@@ -21,5 +21,5 @@ Returns the maiden overs for the given bowler
 library(ipl)
 
 # Calculates the maiden overs for Rahul Sharma
-maiden_overs("Rahul Sharma")
+maiden_overs("R Sharma")
 }
