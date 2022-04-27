@@ -11,7 +11,7 @@ bowling_analysis(player_name)
 character vector}
 }
 \value{
-\code{output_df} returns the summary analysis in a dataframe
+\code{bowling_analysis} returns the summary analysis of a bowler in a dataframe
 }
 \description{
 Returns the summary analysis maiden overs for the given bowler

@@ -18,8 +18,8 @@
 #'
 maiden_overs <- function(player_name) {
 
-  maiden_overs_df <- ball_by_ball %>%
-    dplyr::select(id, ball, batsman, bowler, batsman_runs) %>%
+  maiden_overs_df <- deliveries %>%
+    select(id, ball, batsman, bowler, batsman_runs) %>%
     filter(batsman_runs == 0, bowler == player_name)
 
   ballcount = 1

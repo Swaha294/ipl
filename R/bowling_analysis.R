@@ -3,7 +3,7 @@
 #' @param player_name The bowler whose summary analysis has to be calculated, as a
 #' character vector
 #'
-#' @return `output_df` returns the summary analysis in a dataframe
+#' @return `bowling_analysis` returns the summary analysis of a bowler in a dataframe
 #'
 #' @examples
 #'
@@ -13,28 +13,24 @@
 #' bowling_analysis("Rahul Sharma")
 #' @importFrom magrittr "%>%"
 #' @import dplyr
+#' @importFrom stringr word
 #'
 #' @export
 bowling_analysis <- function(player_name) {
-  overs = overs(player_name)
+  overs = ipl::overs(player_name)
 
   #maiden overs naming
-  firstname_letter = substr(word(player_name, 1), 1, 1)
-  surname = word(player_name, 2)
-  player_name_MO = paste(firstname_letter, surname)
-  maiden_overs = maiden_overs(player_name_MO)
+  firstname_letter <- substr(word(player_name, 1), 1, 1)
+  surname <- word(player_name, 2)
+  player_name_MO <- paste(firstname_letter, surname)
+  maiden_overs <- ipl::maiden_overs(player_name_MO)
 
-  runs = runs(player_name)
-  wickets_taken = wickets_taken(player_name)
-  bowlingAnalysis = paste(overs, "-", maiden_overs, "-",runs, "-", wickets_taken)
+  runs <- ipl::runs(player_name)
+  wickets_taken <- ipl::wickets_taken(player_name)
+  # bowling_analysis <- paste0(overs, "-", maiden_overs, "-",runs, "-", wickets_taken)
 
-  Player <- player_name
-  Overs <- overs
-  Maiden_Overs <- maiden_overs
-  Runs <- runs
-  Wickets_Taken <- wickets_taken
-  Bowling_Analysis <- bowlingAnalysis
+  bowler <- player_name
 
-  output_df <- data.frame(Player, Overs, Maiden_Overs, Runs, Wickets_Taken, Bowling_Analysis)
+  output_df <- data.frame(bowler, overs, maiden_overs, runs, wickets_taken)
   return(output_df)
 }
