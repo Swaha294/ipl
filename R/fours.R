@@ -5,7 +5,7 @@
 #' @param yr The year for which the number of fours for the given batsman is to be
 #' calculated
 #'
-#' @return `sixes` return number of fours for the given player as a value
+#' @return `fours` return number of fours for the given player as a value
 #'
 #' @examples
 #' library(ipl)
