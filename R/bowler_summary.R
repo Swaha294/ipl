@@ -9,7 +9,7 @@
 #' library(ipl)
 #'
 #' # Get the summary table of the bowler statistics for Rahul Sharma
-#' bowler_summary()
+#' bowler_summary("Rahul Sharma")
 #' @importFrom magrittr "%>%"
 #' @import dplyr
 #' @import ggplot2
@@ -38,15 +38,9 @@ bowler_summary <- function() {
   bowler_mostWkts = bowlers_100$player[bowlers_100$wkts == value_mostWkts]
 
   # building each column
-<<<<<<< HEAD
-  Statistic <- c("Most Overs", "Most Runs", "Most Wickets", "Most Matches", "Most Innings")
-  Bowler <- c(bowler_mostOvers, bowler_mostRuns, bowler_mostWkts, bowler_mosMat, bowler_mosInns)
-  Value <- c(value_mostOvers, value_mostRuns, value_mostWkts, value_mostMat, value_mostInns)
-=======
-  statistic <- c("most_overs", "most_runs", "most_wickets")
-  bowler <- c(bowler_mostOvers, bowler_mostRuns, bowler_mostWkts)
-  value <- c(value_mostOvers, value_mostRuns, value_mostWkts)
->>>>>>> 07e07879faf5aac2fda58498315082174996c73d
+  statistic <- c("Most Overs", "Most Runs", "Most Wickets", "Most Matches", "Most Innings")
+  bowler <- c(bowler_mostOvers, bowler_mostRuns, bowler_mostWkts, bowler_mosMat, bowler_mosInns)
+  value <- c(value_mostOvers, value_mostRuns, value_mostWkts, value_mostMat, value_mostInns)
 
   # creating the df
   summary_df <- data.frame(statistic, bowler, value)
