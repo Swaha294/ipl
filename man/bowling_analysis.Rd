@@ -2,7 +2,7 @@
 % Please edit documentation in R/bowling_analysis.R
 \name{bowling_analysis}
 \alias{bowling_analysis}
-\title{Returns the summary analysis maiden overs for the given bowler}
+\title{Returns the summary analysis for the given bowler}
 \usage{
 bowling_analysis(player_name)
 }
@@ -14,7 +14,7 @@ character vector}
 \code{bowling_analysis} returns the summary analysis of a bowler in a dataframe
 }
 \description{
-Returns the summary analysis maiden overs for the given bowler
+Returns the summary analysis for the given bowler
 }
 \examples{
 
