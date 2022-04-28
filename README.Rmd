@@ -21,7 +21,9 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/Swaha294/ipl2/workflows/R-CMD-check/badge.svg)](https://github.com/Swaha294/ipl2/actions)
 <!-- badges: end -->
 
-The goal of `ipl` is to provide data and functions related to IPL matches and standard cricket statistics. This package allows users to avail of IPL data and conduct analysis of cricketers and IPL teams using functions of this package.
+The goal of `ipl` is to provide data and functions related to the Indian Premier Leage (IPL) matches and standard cricket statistics. This package allows users to avail of IPL data and conduct analysis of cricketers and IPL teams using functions of this package.
+
+This is package is important because there isn't a consolidated database where one can find all the data to analyse past IPL matches and players. These functions will also aid in conducting data analysis for those who are interested in analysing IPL trends.
 
 
 ## Description
