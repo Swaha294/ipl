@@ -166,6 +166,9 @@ bowling_analysis("Rahul Sharma")
 ```
 
 
+## Contributors
+
+- [Swaha Bhattacharya](https://github.com/Swaha294)
 
 
 

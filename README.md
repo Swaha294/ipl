@@ -38,7 +38,7 @@ You can install the development version of ipl like so:
 remotes::install_github("Swaha294/ipl")
 #> Downloading GitHub repo Swaha294/ipl@HEAD
 #> 
-#> * checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmp1UzGfD/remotes7a0d7dedba98/Swaha294-ipl-24cfe25/DESCRIPTION’ ... OK
+#> * checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpfUbPPh/remotes7bba1e27d4e4/Swaha294-ipl-f1dec66/DESCRIPTION’ ... OK
 #> * preparing ‘ipl’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
@@ -262,3 +262,7 @@ bowling_analysis("Rahul Sharma")
 #>         bowler overs runs wickets_taken
 #> 1 Rahul Sharma 154.4 1086            40
 ```
+
+## Contributors
+
+-   [Swaha Bhattacharya](https://github.com/Swaha294)
