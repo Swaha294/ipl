@@ -24,12 +24,9 @@ library(ggplot2)
 The `ipl` package aims at supplying data and functions for analysis of data on the Indian Premier League (IPL). It includes datasets on individual balls played in IPL games between 2008 and 2020, on the games themselves, and on the top 100 IPL batsmen and the top 100 IPL bowlers across time. Furthermore, the package includes simple functions on analysis of individual batsmen and bowlers, and for combined analysis of IPL matches. 
 
 
-## Inspiration
+## Motivation
 
 Cricket is a globally played sport, which extensively uses statistics for analysis of games and individual players. Moreover, the IPL is a game that brings players from across the globe together, thus providing a unique perspective on how different cricketers play together. However, data providing information on these games and players, or functions which allow for statistical analyses of the same are not widely accessible. Thus, we wanted to create a package that makes this analysis of cricketers easier, since users do not have to worry about data wrangling, missing data, or important cricket statistics, and can, instead, begin their analyses on IPL. 
-
-
-## Basics of tame data
 
 
 ## Who should use this package?
@@ -38,37 +35,47 @@ Anyone interested in cricket, and specifically the Indian Premier League, who wa
 
 ## Datasets Included
 
+- `deliveries`: Ball-by-ball data of IPL matches played in 2008-2020 
+- `teams`: Winning team, overs bowled, runs made and wickets fallen for each match played by each IPL team in 2008-2020
+- `ipl`: More information on matches from 2008 to 2020
+- `batsman_100`: Information of top 100 batsmen of IPL
+- `bowlers_100`: Informayion of top 100 bowlers of IPL
 
 
+## Functions Included
+
+- `bat_avg` \~ 134,112 B
+- `bat_max` \~ 113,136 B
+- `batsman_summary` \~ 130,616 B
+- `bowler_score` \~ 81,216 B
+- `bowler_summary` \~ 90,000 B
+- `cents_halfcents` \~ 120,688 B
+- `fours` \~ 87,072 B
+- `overs_balls` \~ 90,600 B
+- `overs` \~ 77,240 B
+- `partnership_runs` \~ 93,000 B
+- `runs` \~ 76,984 B
+- `sixes` \~ 87,072 
+- `strike_rate` \~ 118,520 B
+- `toss_choice` \~ 87,016 B
+- `wickets_taken` \~ 77,888 B
+- `winloss` \~ 120,768 B
 
 
+for example:
+```{r}
+# The batting summary of Virate Kohli can be accessed by
+batsman_summary("V Kohli")
+
+# The runs made by each batting partnership by Delhi Daredevils in their match against Rajasthan Royals in 2008 can be found by
+partnership_runs(335984, "Delhi Daredevils")
+
+# The bowling analysis of Harbhajan Singh can be accessed by
+bowling_analysis("Harbhajan Singh")
+
+# The summary table of the wins and losses of Kolkata Knight Riders in 2012 can be found by
+winloss("Kolkata Knight Riders", 2012)
+```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+More details can be found on the documentation pages which can be called via: `?function_name`

@@ -76,7 +76,7 @@
 
 
 
-#' This file contains all the details of the top 100 batsmen
+#' Information on top 100 batsemn of IPL
 #'
 #' @format A data frame of 100 rows representing the stats of the top 100 batsman
 #' \describe{
@@ -99,7 +99,7 @@
 "batsman_100"
 
 
-#' This file contains all the details of the top 100 bowlers
+#' Information on top 100 bowlers of IPL
 #'
 #' @format A data frame of 100 rows for all the bowlers
 #' \describe{
