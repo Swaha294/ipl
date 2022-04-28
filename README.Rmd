@@ -171,7 +171,8 @@ bowling_analysis("Rahul Sharma")
 ## Contributors
 
 - [Swaha Bhattacharya](https://github.com/Swaha294)
-- [Anushree Gosami](https://github.com/agoswa)
+- [Anushree Goswami](https://github.com/agoswa)
+- [Haley Schmidt](https://github.com/heschmidt)
 
 
 
