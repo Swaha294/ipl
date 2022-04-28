@@ -129,7 +129,10 @@ batsman_summary("MS Dhoni")
 winloss("Sunrisers Hyderabad", 2017)
 ```
 
-
+15. Get the bowling analysis for Rahul Sharma
+```{r}
+bowling_analysis("Rahul Sharma")
+```
 
 
 
