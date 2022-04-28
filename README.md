@@ -31,14 +31,16 @@ You can install the development version of ipl like so:
 ``` r
 remotes::install_github("Swaha294/ipl")
 #> Downloading GitHub repo Swaha294/ipl@HEAD
-#> cli (3.2.0 -> 3.3.0) [CRAN]
-#> Installing 1 packages: cli
+#> dplyr (1.0.8 -> 1.0.9) [CRAN]
+#> knitr (1.38  -> 1.39 ) [CRAN]
+#> Installing 2 packages: dplyr, knitr
 #> 
-#>   There is a binary version available but the source version is later:
-#>     binary source needs_compilation
-#> cli  3.2.0  3.3.0              TRUE
-#> installing the source package 'cli'
-#> * checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpmSwQZT/remotes10e4844a3db80/Swaha294-ipl-d33b3d9/DESCRIPTION’ ... OK
+#>   There are binary versions available but the source versions are later:
+#>       binary source needs_compilation
+#> dplyr  1.0.8  1.0.9              TRUE
+#> knitr   1.38   1.39             FALSE
+#> installing the source packages 'dplyr', 'knitr'
+#> * checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpTE1Sva/remotes6bbf4fccc2db/Swaha294-ipl-14aec13/DESCRIPTION’ ... OK
 #> * preparing ‘ipl’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
@@ -183,7 +185,6 @@ partnership_runs(1175358, "Mumbai Indians")
 
 ``` r
 batsman_summary("MS Dhoni")
-#> Joining, by = c("batsman", "year")
 #>    year player_runs player_wickets batting_avg max_runs strike_rate centuries
 #> 1  2020         200              8       25.00       47      116.28         0
 #> 2  2019         416              5       83.20       84      134.63         0
@@ -212,4 +213,23 @@ batsman_summary("MS Dhoni")
 #> 11              2     26      8
 #> 12              2     22      9
 #> 13              2     38     15
+```
+
+15. Get the summary table of wins and losses for Sunrisers Hyderabad in
+    2017
+
+``` r
+winloss("Sunrisers Hyderabad", 2017)
+#>   toss_decision wins losses      wpct
+#> 1           bat    2      0 1.0000000
+#> 2         field    6      6 0.5000000
+#> 3         total    8      6 0.5714286
+```
+
+15. Get the bowling analysis for Rahul Sharma
+
+``` r
+bowling_analysis("Rahul Sharma")
+#>         bowler overs runs wickets_taken
+#> 1 Rahul Sharma 154.4 1086            40
 ```
