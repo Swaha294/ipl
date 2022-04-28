@@ -3,7 +3,7 @@
 \docType{data}
 \name{bowlers_100}
 \alias{bowlers_100}
-\title{This file contains all the details of the top 100 bowlers}
+\title{Information on top 100 bowlers of IPL}
 \format{
 A data frame of 100 rows for all the bowlers
 \describe{
@@ -29,6 +29,6 @@ This dataset was obtained from Kaggle: \href{https://www.kaggle.com/datasets/nki
 bowlers_100
 }
 \description{
-This file contains all the details of the top 100 bowlers
+Information on top 100 bowlers of IPL
 }
 \keyword{datasets}
