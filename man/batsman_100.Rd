@@ -3,7 +3,7 @@
 \docType{data}
 \name{batsman_100}
 \alias{batsman_100}
-\title{This file contains all the details of the top 100 batsmen}
+\title{Information on top 100 batsemn of IPL}
 \format{
 A data frame of 100 rows representing the stats of the top 100 batsman
 \describe{
@@ -30,6 +30,6 @@ This dataset was obtained from Kaggle: \href{https://www.kaggle.com/datasets/nki
 batsman_100
 }
 \description{
-This file contains all the details of the top 100 batsmen
+Information on top 100 batsemn of IPL
 }
 \keyword{datasets}
