@@ -14,15 +14,21 @@ status](https://www.r-pkg.org/badges/version/ipl)](https://CRAN.R-project.org/pa
 
 The goal of `ipl` is to provide data and functions related to IPL
 matches and standard cricket statistics. This package allows users to
-avail of IPL data and conduct analysis of cricketers using functions of
-this package, which return data on the strike rate, batting average, and
-other commonly used cricket statistics.
+avail of IPL data and conduct analysis of cricketers and IPL teams using
+functions of this package.
 
 ## Description
 
 The `ipl` R package consists of datasets on all IPL matches played in
 the years 2008-2020, and provides functions to calculate typical
 crickets statistics.
+
+Our package includes datasets on IPL matches played and cricketers in
+the years 2008-2020, acquired primarily from
+[Kaggle](https://www.kaggle.com/), which have been cleaned so users can
+use it directly for data analysis. Moreover, it comprises functions for
+analysis of individual cricketers and games, as well as summary
+statistics for the same.
 
 ## Installation
 
@@ -31,22 +37,45 @@ You can install the development version of ipl like so:
 ``` r
 remotes::install_github("Swaha294/ipl")
 #> Downloading GitHub repo Swaha294/ipl@HEAD
-#> dplyr (1.0.8 -> 1.0.9) [CRAN]
-#> knitr (1.38  -> 1.39 ) [CRAN]
-#> Installing 2 packages: dplyr, knitr
 #> 
-#>   There are binary versions available but the source versions are later:
-#>       binary source needs_compilation
-#> dplyr  1.0.8  1.0.9              TRUE
-#> knitr   1.38   1.39             FALSE
-#> installing the source packages 'dplyr', 'knitr'
-#> * checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpTE1Sva/remotes6bbf4fccc2db/Swaha294-ipl-14aec13/DESCRIPTION’ ... OK
+#> * checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmp1UzGfD/remotes7a0d7dedba98/Swaha294-ipl-24cfe25/DESCRIPTION’ ... OK
 #> * preparing ‘ipl’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
 #> * checking for empty or unneeded directories
 #> * building ‘ipl_0.0.0.9000.tar.gz’
 ```
+
+## Datasets Included
+
+-   `deliveries`: Ball-by-ball data of IPL matches played in 2008-2020
+-   `teams`: Winning team, overs bowled, runs made and wickets fallen
+    for each match played by each IPL team in 2008-2020
+-   `ipl`: More information on matches from 2008 to 2020
+-   `batsman_100`: Information of top 100 batsmen of IPL
+-   `bowlers_100`: Informayion of top 100 bowlers of IPL
+
+## Functions Included
+
+The following functions allow for individual analyses of cricketers and
+IPL matches, as well as for combined statistical analysis of the same.
+
+-   `bat_avg` \~ 134,112 B
+-   `bat_max` \~ 113,136 B
+-   `batsman_summary` \~ 130,616 B
+-   `bowler_score` \~ 81,216 B
+-   `bowler_summary` \~ 90,000 B
+-   `cents_halfcents` \~ 120,688 B
+-   `fours` \~ 87,072 B
+-   `overs_balls` \~ 90,600 B
+-   `overs` \~ 77,240 B
+-   `partnership_runs` \~ 93,000 B
+-   `runs` \~ 76,984 B
+-   `sixes` \~ 87,072
+-   `strike_rate` \~ 118,520 B
+-   `toss_choice` \~ 87,016 B
+-   `wickets_taken` \~ 77,888 B
+-   `winloss` \~ 120,768 B
 
 ## Example
 
