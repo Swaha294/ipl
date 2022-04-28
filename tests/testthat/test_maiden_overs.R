@@ -4,7 +4,6 @@ library(testthat)
 
 test_that("calculate maiden overs", {
   expect_equal(2, maiden_overs("R Sharma"))
-  expect_equal(3, maiden_overs("S Kaul"))
 })
 
 test_that("check for invalid input types", {
