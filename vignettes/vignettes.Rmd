@@ -27,7 +27,7 @@ The `ipl` package aims at supplying data and functions for analysis of data on t
 
 ## Motivation
 
-Cricket is a globally played sport, which extensively uses statistics for the analysis of games and individual players. Moreover, the IPL is a game that brings players from across the globe together, thus providing a unique perspective on how different cricketers play together. However, data providing information on these games and players, or functions which allow for statistical analyses of the same are not widely accessible. Thus, we wanted to create a package that makes this analysis of cricketers easier, since users do not have to worry about data wrangling, missing data, or important cricket statistics, and can, instead, begin their analyses on IPL. 
+Cricket is a globally played sport, which extensively uses statistics for the analysis of games and individual players. Moreover, the IPL is a game that brings players from across the globe together, thus providing a unique perspective on how different cricketers play together. However, data providing information on these games and players, or functions which allow for statistical analyses of the same are not widely accessible. Right now, there is no consolidated place for all this data on the IPL. Thus, we wanted to create a package that makes this analysis of cricketers easier, since users do not have to worry about data wrangling, missing data, or important cricket statistics, and can, instead, begin their analyses on IPL. 
 
 
 ## Who should use this package?
