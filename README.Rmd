@@ -35,7 +35,7 @@ Our package includes datasets on IPL matches played and cricketers in the years 
 
 ## Installation
 
-You can install the development version of ipl like so:
+You can install the development version of `ipl` like so:
 
 ``` {r}
 remotes::install_github("Swaha294/ipl")
@@ -73,100 +73,40 @@ The following functions allow for individual analyses of cricketers and IPL matc
 - `winloss` \~ 120,768 B
 
 
-## Example
+## Basic Usage
 
-This is a basic example which shows you how to solve a common problem:
+These are a few examples of how to use the package to compute different statistics for cricketers and IPL matches
 
 Load `ipl` R package
 ```{r load package}
 library(ipl)
 ```
 
-1. Calculate Virat Kohli's batting average in the 2016 season
-```{r}
-bat_avg("V Kohli", 2016)
-```
 
-2. Calculate the maximum runs made by Virat Kohli in a match in the 2016 IPL season
-```{r}
-bat_max("V Kohli", 2016)
-```
-
-3. Calculate the number of centuries and half-centuries made by Virat Kohli in the 2016 IPL season
-```{r}
-cents_halfcents("V Kohli", 2016)
-```
-
-4. Calculate Virat Kohli's strike rate in the 2016 IPL season
-```{r}
-strike_rate("V Kohli", 2016)
-```
-
-5. Calculates the number of times a team chooses to start batting and fielding
-```{r}
-toss_choice("Delhi Daredevils")
-```
-
-6. Find the list of bowlers with bowling average above 40
-```{r}
-bowler_score(40)
-```
-
-7. Calculate Rahul Sharma's overs
-```{r}
-overs("Rahul Sharma")
-```
-
-8. Find Rohit Sharma's total number of sixes in the 2016 IPL season
-```{r}
-sixes("RG Sharma", 2016)
-```
-
-9. Find Suresh Raina's total number of fours in the 2012 IPL season
-```{r}
-fours("SK Raina", 2012)
-```
-
-10. Calculate the number of runs conceded by a given bowler across all IPL 
-matches from 2008-2020
-```{r}
-runs("Rahul Sharma")
-```
-
-11. Calculate the number of wickets taken by a given bowler across all IPL 
-matches from 2008-2020
-```{r}
-wickets_taken("Rahul Sharma")
-```
-
-12. Calculate the number of complete overs and the remaining (legal) balls bowled 
-by Rahul across all IPL matches from 2008-2020
-```{r}
-overs_balls("Rahul Sharma")
-```
-
-13. Visualize the number of runs made by Mumbai Indians in their match against
+1. Visualize the number of runs made by Mumbai Indians in their match against
 Delhi Capitals on 2019-03-24, by partnerships
 ```{r}
 partnership_runs(1175358, "Mumbai Indians")
 ```
 
-14. Get the summary table of all batting statistics for MS Dhoni for all IPL matches
+2. Get the summary table of all batting statistics for MS Dhoni for all IPL matches
 he played between 2008 and 2020
 ```{r}
 batsman_summary("MS Dhoni")
 ```
 
-15. Get the summary table of wins and losses for Sunrisers Hyderabad in 2017
+3. Get the summary table of wins and losses for Sunrisers Hyderabad in 2017
 ```{r}
 winloss("Sunrisers Hyderabad", 2017)
 ```
 
-15. Get the bowling analysis for Rahul Sharma
+4. Get the bowling analysis for Rahul Sharma
 ```{r}
 bowling_analysis("Rahul Sharma")
 ```
 
+
+More examples can be found in the vignette.
 
 ## Contributors
 

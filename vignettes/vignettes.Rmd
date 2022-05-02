@@ -64,6 +64,21 @@ Anyone interested in cricket, and specifically the Indian Premier League, who wa
 
 for example:
 ```{r}
+# The batting average of Virat Kohli and MS Dhoni in the years 2016 and 2017 can be computed by
+bat_avg(c("V Kohl", "MS Dhoni"), 2016:2017)
+
+# The maximum runs made by MS Dhoni in the year 2017 can be computed by
+bat_max("MS Dhoni", 2017)
+
+# The strike rate of AB de Villiers in the year 2015 can be computed by
+strike_rate("AB de Villiers", 2015)
+
+# The total distribution of  the toss choice of Royal Challengers Bangalore can be computed using
+toss_choice("Royal Challengers Bangalore")
+
+# The list of bowlers with a bowling average above 40 can be retrieved using
+bowler_score(40)
+
 # The batting summary of Virate Kohli can be accessed by
 batsman_summary("V Kohli")
 
@@ -79,3 +94,47 @@ winloss("Kolkata Knight Riders", 2012)
 
 
 More details can be found on the documentation pages which can be called via: `?function_name`
+
+
+## What does the data look like
+
+The first six rows of the `deliveries` data set looks like
+```{r}
+head(deliveries)
+```
+
+The first six rows of the `teams` data set looks like
+```{r}
+head(teams)
+```
+
+The first six rows of the `bowlers_100` data set looks like
+```{r}
+head(bowlers_100)
+```
+
+
+## What can we do with this data?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

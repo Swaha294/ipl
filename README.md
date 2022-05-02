@@ -12,10 +12,15 @@ status](https://www.r-pkg.org/badges/version/ipl)](https://CRAN.R-project.org/pa
 [![R-CMD-check](https://github.com/Swaha294/ipl2/workflows/R-CMD-check/badge.svg)](https://github.com/Swaha294/ipl2/actions)
 <!-- badges: end -->
 
-The goal of `ipl` is to provide data and functions related to IPL
-matches and standard cricket statistics. This package allows users to
-avail of IPL data and conduct analysis of cricketers and IPL teams using
-functions of this package.
+The goal of `ipl` is to provide data and functions related to the Indian
+Premier Leage (IPL) matches and standard cricket statistics. This
+package allows users to avail of IPL data and conduct analysis of
+cricketers and IPL teams using functions of this package.
+
+This is package is important because there isn’t a consolidated database
+where one can find all the data to analyse past IPL matches and players.
+These functions will also aid in conducting data analysis for those who
+are interested in analysing IPL trends.
 
 ## Description
 
@@ -32,18 +37,12 @@ statistics for the same.
 
 ## Installation
 
-You can install the development version of ipl like so:
+You can install the development version of `ipl` like so:
 
 ``` r
 remotes::install_github("Swaha294/ipl")
-#> Downloading GitHub repo Swaha294/ipl@HEAD
-#> 
-#> * checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpfUbPPh/remotes7bba1e27d4e4/Swaha294-ipl-f1dec66/DESCRIPTION’ ... OK
-#> * preparing ‘ipl’:
-#> * checking DESCRIPTION meta-information ... OK
-#> * checking for LF line-endings in source and make files and shell scripts
-#> * checking for empty or unneeded directories
-#> * building ‘ipl_0.0.0.9000.tar.gz’
+#> Skipping install of 'ipl' from a github remote, the SHA1 (4acf56a3) has not changed since last install.
+#>   Use `force = TRUE` to force installation
 ```
 
 ## Datasets Included
@@ -77,9 +76,10 @@ IPL matches, as well as for combined statistical analysis of the same.
 -   `wickets_taken` \~ 77,888 B
 -   `winloss` \~ 120,768 B
 
-## Example
+## Basic Usage
 
-This is a basic example which shows you how to solve a common problem:
+These are a few examples of how to use the package to compute different
+statistics for cricketers and IPL matches
 
 Load `ipl` R package
 
@@ -87,129 +87,16 @@ Load `ipl` R package
 library(ipl)
 ```
 
-1.  Calculate Virat Kohli’s batting average in the 2016 season
-
-``` r
-bat_avg("V Kohli", 2016)
-#>   batsman year player_runs player_wickets batting_avg
-#> 1 V Kohli 2016         973             12       81.08
-```
-
-2.  Calculate the maximum runs made by Virat Kohli in a match in the
-    2016 IPL season
-
-``` r
-bat_max("V Kohli", 2016)
-#> # A tibble: 1 × 3
-#>    year batsman max_runs
-#>   <dbl> <chr>      <dbl>
-#> 1  2016 V Kohli      113
-```
-
-3.  Calculate the number of centuries and half-centuries made by Virat
-    Kohli in the 2016 IPL season
-
-``` r
-cents_halfcents("V Kohli", 2016)
-#> # A tibble: 1 × 4
-#>    year batsman centuries half_centuries
-#>   <dbl> <chr>       <dbl>          <dbl>
-#> 1  2016 V Kohli         4              7
-```
-
-4.  Calculate Virat Kohli’s strike rate in the 2016 IPL season
-
-``` r
-strike_rate("V Kohli", 2016)
-#> # A tibble: 1 × 3
-#>    year batsman strike_rate
-#>   <dbl> <chr>         <dbl>
-#> 1  2016 V Kohli        152.
-```
-
-5.  Calculates the number of times a team chooses to start batting and
-    fielding
-
-``` r
-toss_choice("Delhi Daredevils")
-#> # A tibble: 2 × 2
-#>   toss_decision   num
-#>   <fct>         <int>
-#> 1 bat              29
-#> 2 field            51
-```
-
-6.  Find the list of bowlers with bowling average above 40
-
-``` r
-bowler_score(40)
-#> [1] "Murali Kartik" "Tim Southee"   "Suresh Raina"  "Brett Lee"
-```
-
-7.  Calculate Rahul Sharma’s overs
-
-``` r
-overs("Rahul Sharma")
-#> [1] 154.4
-```
-
-8.  Find Rohit Sharma’s total number of sixes in the 2016 IPL season
-
-``` r
-sixes("RG Sharma", 2016)
-#> # A tibble: 1 × 3
-#> # Groups:   batsman [1]
-#>   batsman    year num_6s
-#>   <chr>     <dbl>  <int>
-#> 1 RG Sharma  2016     17
-```
-
-9.  Find Suresh Raina’s total number of fours in the 2012 IPL season
-
-``` r
-fours("SK Raina", 2012)
-#> # A tibble: 1 × 3
-#> # Groups:   batsman [1]
-#>   batsman   year num_4s
-#>   <chr>    <dbl>  <int>
-#> 1 SK Raina  2012     36
-```
-
-10. Calculate the number of runs conceded by a given bowler across all
-    IPL matches from 2008-2020
-
-``` r
-runs("Rahul Sharma")
-#> [1] 1086
-```
-
-11. Calculate the number of wickets taken by a given bowler across all
-    IPL matches from 2008-2020
-
-``` r
-wickets_taken("Rahul Sharma")
-#> [1] 40
-```
-
-12. Calculate the number of complete overs and the remaining (legal)
-    balls bowled by Rahul across all IPL matches from 2008-2020
-
-``` r
-overs_balls("Rahul Sharma")
-#>         player completed_overs balls
-#> 1 Rahul Sharma             154     4
-```
-
-13. Visualize the number of runs made by Mumbai Indians in their match
+1.  Visualize the number of runs made by Mumbai Indians in their match
     against Delhi Capitals on 2019-03-24, by partnerships
 
 ``` r
 partnership_runs(1175358, "Mumbai Indians")
 ```
 
-<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
-14. Get the summary table of all batting statistics for MS Dhoni for all
+2.  Get the summary table of all batting statistics for MS Dhoni for all
     IPL matches he played between 2008 and 2020
 
 ``` r
@@ -244,7 +131,7 @@ batsman_summary("MS Dhoni")
 #> 13              2     38     15
 ```
 
-15. Get the summary table of wins and losses for Sunrisers Hyderabad in
+3.  Get the summary table of wins and losses for Sunrisers Hyderabad in
     2017
 
 ``` r
@@ -255,7 +142,7 @@ winloss("Sunrisers Hyderabad", 2017)
 #> 3         total    8      6 0.5714286
 ```
 
-15. Get the bowling analysis for Rahul Sharma
+4.  Get the bowling analysis for Rahul Sharma
 
 ``` r
 bowling_analysis("Rahul Sharma")
@@ -263,6 +150,10 @@ bowling_analysis("Rahul Sharma")
 #> 1 Rahul Sharma 154.4 1086            40
 ```
 
+More examples can be found in the vignette.
+
 ## Contributors
 
 -   [Swaha Bhattacharya](https://github.com/Swaha294)
+-   [Anushree Goswami](https://github.com/agoswa)
+-   [Haley Schmidt](https://github.com/heschmidt)
