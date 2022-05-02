@@ -65,7 +65,7 @@ Anyone interested in cricket, and specifically the Indian Premier League, who wa
 for example:
 ```{r}
 # The batting average of Virat Kohli and MS Dhoni in the years 2016 and 2017 can be computed by
-bat_avg(c("V Kohl", "MS Dhoni"), 2016:2017)
+bat_avg(c("V Kohli", "MS Dhoni"), 2016:2017)
 
 # The maximum runs made by MS Dhoni in the year 2017 can be computed by
 bat_max("MS Dhoni", 2017)
@@ -116,11 +116,71 @@ head(bowlers_100)
 
 ## What can we do with this data?
 
+We can use this package to address the (non-exhaustive) list of questions: 
+
+1. Compare the batting averages of batsmen over time using a data visualization
+2. Compare strike rate and maximum runs of batsmen using a data visualization
+3. Run a regression to predict strike rate based on different batting statistics
+4. The bowling analysis of different bowlers can be compared
+
+
+### Example 1
+
+```{r}
+bat_avg(c("KL Rahul", "RG Sharma", "V Kohli"), 2013:2020) %>% 
+  ggplot(aes(year, batting_avg, color = batsman)) +
+  geom_line() +
+  labs(
+    title = "Batting average between 2013 and 2020",
+    x = "Year",
+    y = "Batting Average",
+    color = "Batsman"
+  ) +
+  theme_linedraw()
+```
+
+
+### Example 2
+
+
+```{r}
+my_df <- map_df(c("AB de Villiers", "V Kohli", "MS Dhoni", "RG Sharma"), batsman_summary)
+```
 
 
 
+```{r}
+ggplot(aes(max_runs, strike_rate), data = my_df) +
+  geom_point() +
+  labs(
+    x = "Maximum Runs",
+    y = "Strike Rate",
+    title = "Strike Rate and Maximum Runs"
+  ) +
+  theme_linedraw()
+```
+
+### Example 3
+
+```{r}
+my_df2 <- my_df[, -1]
+```
+
+```{r}
+my_lm <- lm(strike_rate ~ ., data = my_df2)
+
+summary(my_lm)
+```
 
 
+Note that this example is not accurate since it contains a selection bias as only four players are used in the data frame. To return a regression with accurate results, data on all the batsmen should be used.
+
+
+### Example 4
+
+```{r}
+map_df(c("Rahul Sharma", "Harbhajan Singh"), bowling_analysis)
+```
 
 
 
