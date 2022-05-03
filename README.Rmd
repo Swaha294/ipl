@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/Swaha294/ipl2/workflows/R-CMD-check/badge.svg)](https://github.com/Swaha294/ipl2/actions)
 <!-- badges: end -->
 
-The goal of `ipl` is to provide data and functions related to the Indian Premier Leage (IPL) matches and standard cricket statistics. This package allows users to avail of IPL data and conduct analysis of cricketers and IPL teams using functions of this package.
+The goal of `ipl` is to provide data and functions related to the Indian Premier League (IPL) matches and standard cricket statistics. This package allows users to avail of IPL data and conduct analysis of cricketers and IPL teams using functions of this package.
 
 This is package is important because there isn't a consolidated database where one can find all the data to analyse past IPL matches and players. These functions will also aid in conducting data analysis for those who are interested in analysing IPL trends.
 
@@ -48,7 +48,7 @@ remotes::install_github("Swaha294/ipl")
 - `teams`: Winning team, overs bowled, runs made and wickets fallen for each match played by each IPL team in 2008-2020
 - `ipl`: More information on matches from 2008 to 2020
 - `batsman_100`: Information of top 100 batsmen of IPL
-- `bowlers_100`: Informayion of top 100 bowlers of IPL
+- `bowlers_100`: Information of top 100 bowlers of IPL
 
 
 ## Functions Included
