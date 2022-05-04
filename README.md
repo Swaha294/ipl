@@ -13,7 +13,7 @@ status](https://www.r-pkg.org/badges/version/ipl)](https://CRAN.R-project.org/pa
 <!-- badges: end -->
 
 The goal of `ipl` is to provide data and functions related to the Indian
-Premier Leage (IPL) matches and standard cricket statistics. This
+Premier League (IPL) matches and standard cricket statistics. This
 package allows users to avail of IPL data and conduct analysis of
 cricketers and IPL teams using functions of this package.
 
@@ -41,8 +41,22 @@ You can install the development version of `ipl` like so:
 
 ``` r
 remotes::install_github("Swaha294/ipl")
-#> Skipping install of 'ipl' from a github remote, the SHA1 (4acf56a3) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+#> Downloading GitHub repo Swaha294/ipl@HEAD
+#> tibble  (3.1.6 -> 3.1.7) [CRAN]
+#> ggplot2 (3.3.5 -> 3.3.6) [CRAN]
+#> Installing 2 packages: tibble, ggplot2
+#> 
+#>   There are binary versions available but the source versions are later:
+#>         binary source needs_compilation
+#> tibble   3.1.6  3.1.7              TRUE
+#> ggplot2  3.3.5  3.3.6             FALSE
+#> installing the source packages 'tibble', 'ggplot2'
+#> * checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmprsNSua/remotes41121ff051a6/Swaha294-ipl-993c34c/DESCRIPTION’ ... OK
+#> * preparing ‘ipl’:
+#> * checking DESCRIPTION meta-information ... OK
+#> * checking for LF line-endings in source and make files and shell scripts
+#> * checking for empty or unneeded directories
+#> * building ‘ipl_0.0.0.9000.tar.gz’
 ```
 
 ## Datasets Included
@@ -52,7 +66,7 @@ remotes::install_github("Swaha294/ipl")
     for each match played by each IPL team in 2008-2020
 -   `ipl`: More information on matches from 2008 to 2020
 -   `batsman_100`: Information of top 100 batsmen of IPL
--   `bowlers_100`: Informayion of top 100 bowlers of IPL
+-   `bowlers_100`: Information of top 100 bowlers of IPL
 
 ## Functions Included
 
@@ -64,6 +78,7 @@ IPL matches, as well as for combined statistical analysis of the same.
 -   `batsman_summary` \~ 130,616 B
 -   `bowler_score` \~ 81,216 B
 -   `bowler_summary` \~ 90,000 B
+-   `bowling_analysis` \~ 93,216 B
 -   `cents_halfcents` \~ 120,688 B
 -   `fours` \~ 87,072 B
 -   `overs_balls` \~ 90,600 B

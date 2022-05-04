@@ -60,6 +60,7 @@ The following functions allow for individual analyses of cricketers and IPL matc
 - `batsman_summary` \~ 130,616 B
 - `bowler_score` \~ 81,216 B
 - `bowler_summary` \~ 90,000 B
+- `bowling_analysis` \~ 93,216 B
 - `cents_halfcents` \~ 120,688 B
 - `fours` \~ 87,072 B
 - `overs_balls` \~ 90,600 B
