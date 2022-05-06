@@ -6,7 +6,7 @@ df <- data.frame(
   "batsman" = "V Kohli",
   year = 2016,
   player_runs = 973,
-  player_wickets = 12,
+  player_wickets = 12L,
   batting_avg = 81.08
 )
 
@@ -15,9 +15,10 @@ df2 <- data.frame(
   "batsman" = c("V Kohli", "V Kohli", "MS Dhoni", "MS Dhoni"),
   "year" = c(2016, 2017, 2016, 2017),
   player_runs = c(973, 308, 284, 290),
-  player_wickets = c(12, 10, 8, 13),
-  batting_avg = c(81.08, 30.80, 35.50, 22.31)
-)
+  player_wickets = c(12L, 11L, 8L, 13L),
+  batting_avg = c(81.08, 28.00, 35.50, 22.31)
+) %>%
+  arrange(batsman, year)
 
 test_that("check batting avg", {
   expect_identical(df, bat_avg("V Kohli", 2016))

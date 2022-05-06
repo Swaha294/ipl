@@ -21,53 +21,34 @@
 #' @export
 
 bat_avg <- function(players, years) {
-  avg_calc <- function(player, yr) {
-    deliveries %>%
-      filter(
-        batsman %in% player,
-        year %in% yr
-      ) %>%
-      group_by(batsman, year) %>%
-      summarise(
-        player_runs = sum(batsman_runs),
-        player_wickets = length(unique(.$id[.$is_wicket == 1])),
-        batting_avg = round(player_runs / player_wickets, 2)
-      ) %>%
-      ungroup()
+
+  if (!is.character(players)) {
+    stop("Invalid input: player should be a character vector", call. = FALSE)
+  }
+  if (!is.numeric(years)) {
+    stop("Invalid input: year should be a numeric vector", call. = FALSE)
+  }
+  if (!all(players %in% deliveries$batsman)) {
+    stop(paste0(pl, " not found! \n"), call. = FALSE)
+  }
+  if (!all(years %in% deliveries$year)) {
+    stop(paste0(y, " year not found! \n"), call. = FALSE)
   }
 
-  avgs <- data.frame(
-    batsman = NA,
-    year = NA,
-    player_runs = NaN,
-    player_wickets = NaN,
-    batting_avg = NaN
-  )
-
-
-  for (pl in players) {
-    for (y in years) {
-      if (!is.character(pl)) {
-        stop("Invalid input: player should be a character vector", call. = FALSE)
-      } else if (!is.numeric(y)) {
-        stop("Invalid input: year should be a numeric vector", call. = FALSE)
-      } else if (!(pl %in% deliveries$batsman)) {
-        stop(paste0(pl, " not found! \n"), call. = FALSE)
-      } else if (!(y %in% deliveries$year)) {
-        stop(paste0(y, " year not found! \n"), call. = FALSE)
-      } else {
-        avgs <- full_join(avgs, avg_calc(pl, y),
-          by = c(
-            "batsman", "year", "player_runs",
-            "player_wickets", "batting_avg"
-          )
-        )
-      }
-    }
-  }
-
-  avgs <- avgs %>%
-    filter(!is.na(batsman))
-
-  return(avgs)
+  deliveries %>%
+    filter(
+      batsman %in% players,
+      year %in% years
+    ) %>%
+    group_by(batsman, year) %>%
+    summarise(
+      player_runs = sum(batsman_runs),
+#      player_wickets = length(unique(.$id[.$is_wicket == 1])),
+      player_wickets = sum(is_wicket == "1"),
+      batting_avg = round(player_runs / player_wickets, 2)
+    ) %>%
+    ungroup() %>%
+    filter(!is.na(batsman)) %>%
+    arrange(batsman, year) %>%
+    as.data.frame()
 }
