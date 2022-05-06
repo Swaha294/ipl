@@ -10,11 +10,12 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.width = 5
 )
 ```
 
-```{r setup}
+```{r setup, message=FALSE}
 library(ipl)
 library(dplyr)
 library(ggplot2)
@@ -182,20 +183,3 @@ Note that this example is not accurate since it contains a selection bias as onl
 ```{r}
 map_df(c("Rahul Sharma", "Harbhajan Singh"), bowling_analysis)
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
