@@ -10,12 +10,8 @@
 #' number of players and years inputted and 5 columns.
 #'
 #' @examples
-#'
-#' library(ipl)
-#'
 #' # Compute batting average of Virat Kohli in 2019
 #' bat_avg("V Kohli", 2019)
-#'
 #'
 #' # Compute batting averages of Virat Kohli, MS Dhoni, Rohit Sharma in
 #' # 2017, 2018, and 2019
