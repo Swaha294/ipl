@@ -29,10 +29,10 @@ bat_avg <- function(players, years) {
     stop("Invalid input: year should be a numeric vector", call. = FALSE)
   }
   if (!all(players %in% deliveries$batsman)) {
-    stop(paste0(pl, " not found! \n"), call. = FALSE)
+    stop(paste0(players, " not found! \n"), call. = FALSE)
   }
   if (!all(years %in% deliveries$year)) {
-    stop(paste0(y, " year not found! \n"), call. = FALSE)
+    stop(paste0(years, " year not found! \n"), call. = FALSE)
   }
 
   deliveries %>%
